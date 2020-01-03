@@ -2,27 +2,72 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="animation.scss">
-	<link rel="stylesheet" type="text/javascript" href="jquery-2.2.4.min.js">
-	<link rel="stylesheet" type="text/javascript" href="babel.js">
+	<link rel="stylesheet" type="text/css" href="css/animation.scss">
 </head>
+
+<style>
+    /*Chrome*/
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 800px;
+      -webkit-appearance: none;
+      background-color: #9a905d;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 100px;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 270px;
+      -webkit-appearance: none;
+      height: 100px;
+      cursor: ew-resize;
+      background: none;
+      background-image: url('images/delorean.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: -800px 0 0 800px #43e5f7;
+    }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #9a905d;
+}
+   
+
+</style>
 <body>
 
-<main>
-  <form oninput="output.value = Math.round(range.valueAsNumber / 1000)">
-    <h2>
-      Range slider
-    </h2>
-    <div class="range">
-      <input name="range" type="range" min="0" max="100000">
-      <div class="range-output">
-        <output class="output" name="output" for="range">
-          50
-        </output>
-      </div>
-    </div>
-  </form>
-</main>
+	<main>
+	  <form oninput="output.value = Math.round(range.valueAsNumber)">
+	    <h2>
+	      Range slider
+	    </h2>
+	    <div class="range">
+	      <input name="range" type="range" min="0" max="50">
+	      <div class="range-output">
+	        <output class="output" name="output" for="range">
+	        </output>
+	      </div>
+	    </div>
+	  </form>
+	</main>
 
 </body>
 </html>

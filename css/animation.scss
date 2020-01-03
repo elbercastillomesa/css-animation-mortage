@@ -2,7 +2,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 $color-range-output: #383c42;
 $color-input-placeholder: #c3c4c6;
 $height-range-bounds: 22px;
-$background-color-range-thumb: #333940;
+$background-color-range-thumb: #000;
 $radius-range-thumb: 100px;
 $height-range-thumb: 24px;
 $width-range-thumb: 24px;
@@ -112,7 +112,9 @@ $offset-y-range-output: 4px;
 		transform: translateY(-50%);
 		height: $height-range-track;
 		will-change: width;
+		background: url('images/delorean.png');
 	}
+
 
 	//Thumb
 	input::-webkit-slider-thumb {
@@ -179,7 +181,7 @@ $offset-y-range-output: 4px;
 
 //Demo stuff
 body {
-  font-family: Helvetica Neue, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-weight: 300;
 }
 
@@ -192,8 +194,8 @@ main {
 }
 
 form {
-  max-width: 500px;
-  min-width: 320px;
+  max-width: 600px;
+  min-width: 400px;
 }
 
 h2 {
