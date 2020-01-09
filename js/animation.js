@@ -1,33 +1,15 @@
-$('#draggable-point').draggable({
-  axis: 'x',
-  containment: "#audio-progress"
+document.getElementById('more').addEventListener("click", function(event){
+	document.getElementById('range').value += 1;
+	sliderOutput("output", document.getElementById('range').value);
 });
 
-$('#draggable-point').draggable({
-  drag: function() {
-    var offset = $(this).offset();
-    var xPos = (100 * parseFloat($(this).css("left"))) / (parseFloat($(this).parent().css("width"))) + "%";
-   
-    $('#audio-progress-bar').css({
-      'width': xPos
-    });
-  }
+document.getElementById('less').addEventListener("click", function(event){
+	document.getElementById('range').value -= 1;
+	sliderOutput("output", document.getElementById('range').value);
 });
 
-/*
-
-function backgroundChange() { 
-
-	var btn1 = document.getElementById("button1");
-
-    var e = document.getElementById("demo");
-    var c = window.getComputedStyle(e).backgroundColor;
-    if (c === "rgb(0, 0, 0)") {
-    document.getElementById("demo").style.background = "#ff77ee";
-} else{
-    document.getElementById("demo").style.background = "#000";
-}
-}
-
-
-*/
+function sliderOutput(variable, value){
+    var s = document.getElementById(variable);
+    s.value = value;
+    console.log(value);
+}   

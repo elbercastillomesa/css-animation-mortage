@@ -13,19 +13,24 @@
 	      Range slider
 	    </h2>
 	    <div class="range-output">
-	        <output class="output" name="output" for="range">
-	        	25
+	        <output class="output" name="output" id="output" for="range">
+	        	1
 	        </output>
 	    </div>
 	    <div class="range">
-	      <input name="range" type="range" min="0" max="50">	      
+	      <input name="range" id="range" type="range" min="1" max="50" value="1">	      
 	    </div>
 	  </form>
+
+    	<button type="button" id="less">-</button> 
+    	<button type="button" id="more">+</button>
+
 	</main>
 
 	<div class="footer">
         <a href="index.html">Return</a>
     </div>
 
+<script type="text/javascript" src="js/animation.js"></script>
 </body>
 </html>
