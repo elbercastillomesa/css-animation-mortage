@@ -11,5 +11,14 @@ document.getElementById('less').addEventListener("click", function(event){
 function sliderOutput(variable, value){
     var s = document.getElementById(variable);
     s.value = value;
-    console.log(value);
+    
+    if (s.value > 20) { 
+    	console.log('green');
+    	setColor(document.body,'green');
+    }
 }   
+
+function setColor(element, color)
+{
+    element.style.background = color;
+}
