@@ -1,10 +1,10 @@
 document.getElementById('more').addEventListener("click", function(event){
-	document.getElementById('range').value += 1;
+	document.getElementById('range').value++;
 	sliderOutput("output", document.getElementById('range').value);
 });
 
 document.getElementById('less').addEventListener("click", function(event){
-	document.getElementById('range').value -= 1;
+	document.getElementById('range').value--;
 	sliderOutput("output", document.getElementById('range').value);
 });
 
