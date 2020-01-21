@@ -15,14 +15,17 @@ document.getElementById('range').addEventListener("change", function(event){
 
 function sliderOutput(variable, value){
     var s = document.getElementById(variable);
-    s.value = value;
-    
-    if (s.value > 20) { 
-    	setColor(document.body	,'green');
-    }
+	s.value = value;
+	setColor(document.body, s.value);    
 }   
 
-function setColor(element, color)
-{
-    element.style.background = "url('https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80')";
+function setColor(element, value){
+	
+	if (value < 20){element.style.background = "#FFFFFF";}
+
+	if (value > 19 && value < 40){element.style.background = "#AA99ff";}
+
+	if (value > 39 && value < 50){element.style.background = "#EE00AA";}
+
+	if (value > 49){element.style.background = "#2299EE";}
 }
