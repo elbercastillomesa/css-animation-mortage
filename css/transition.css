@@ -1,0 +1,24 @@
+.button{
+  top: -100px;
+  animation: drop 0.5s ease forwards;
+}
+
+.button:hover {
+    background-image: linear-gradient(to bottom, #ece1c1, #d4bc72);
+    color: #000;
+}
+
+/*// ANIMATION STYLES //*/
+
+@keyframes drop{
+  0%{
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(70px);
+  }
+  100%{
+    transform: translateY(65px);
+    opacity: 1;
+  }
+}
