@@ -8,6 +8,10 @@
     color: #000;
 }
 
+.button.hide{
+  animation: drop 1s ease forwards reverse;
+}
+
 /*// ANIMATION STYLES //*/
 
 @keyframes drop{
@@ -15,10 +19,10 @@
     opacity: 0;
   }
   70%{
-    transform: translateY(70px);
+    transform: translateY(50px);
   }
   100%{
-    transform: translateY(65px);
+    transform: translateY(45px);
     opacity: 1;
   }
 }
