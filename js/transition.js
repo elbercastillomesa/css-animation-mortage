@@ -3,11 +3,13 @@ function getStarted(button) {
     var sectionDiv = document.getElementsByTagName('section');
     var mainDiv = document.getElementsByTagName('main');
 
-    console.log(button.className);
+    var stackOne = document.getElementById('stack-one');
 
-    if (button.className === 'button') {
-      button.classList.add('hide');
+    console.log(stackOne.className);
+
+    if(stackOne.className === 'stack-one'){
+      stackOne.classList.add('hidden');
     } else {
-      button.classList.remove('hide');
+
     }
 }

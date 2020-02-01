@@ -1,16 +1,27 @@
 .button{
   top: -100px;
+  display: flex;
   animation: drop 0.5s ease forwards;
 }
 
-.button:hover {
-    background-image: linear-gradient(to bottom, #ece1c1, #d4bc72);
-    color: #000;
+
+.stack-one{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  opacity: 0.8;  /* for demo purpose  */
+  background: gray;
+
+  position: relative;
+  z-index: 9;
 }
 
-.button.hide{
-  animation: drop 1s ease forwards reverse;
+.stack-one.hidden{
+  animation: hide 1s linear forwards;
 }
+
 
 /*// ANIMATION STYLES //*/
 
@@ -19,10 +30,25 @@
     opacity: 0;
   }
   70%{
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
   100%{
-    transform: translateY(45px);
+    transform: translateY(20px);
     opacity: 1;
+  }
+}
+
+@keyframes hide {
+
+  0%{
+    opacity: 1;
+  }
+  50%{
+    top: -50%;
+    opacity: 0.5;
+  }
+  100%{
+    top: -100%;
+    opacity: 0;
   }
 }

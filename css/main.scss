@@ -84,3 +84,8 @@ footer{
   cursor: pointer;
   border-radius: 30%;
 }
+
+.button:hover {
+    background-image: linear-gradient(to bottom, #ece1c1, #d4bc72);
+    color: #000;
+}
