@@ -6,14 +6,14 @@
       -webkit-appearance: none;
       background-color: #F4F4F4;
     }
-    
+
     input[type='range']::-webkit-slider-runnable-track {
       height: 100px;
       -webkit-appearance: none;
       color: #13bba4;
       margin-top: -1px;
     }
-    
+
     input[type='range']::-webkit-slider-thumb {
       width: 270px;
       -webkit-appearance: none;
@@ -29,16 +29,31 @@
 
 /********* FF *********/
 input[type="range"]::-moz-range-progress {
-  background-color: #43e5f7; 
+  background-color: #43e5f7;
 }
-input[type="range"]::-moz-range-track {  
+input[type="range"]::-moz-range-track {
   background-color: #9a905d;
 }
 
 /********* IE *********/
 input[type="range"]::-ms-fill-lower {
-  background-color: #43e5f7; 
+  background-color: #43e5f7;
 }
-input[type="range"]::-ms-fill-upper {  
+input[type="range"]::-ms-fill-upper {
   background-color: #9a905d;
+}
+
+
+output {
+  /*position: absolute;*/
+  background-image: linear-gradient(#444444, #999999);
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  display: inline-block;
+  font: bold 15px/30px Georgia;
+  bottom: 175%;
+  left: 0;
 }

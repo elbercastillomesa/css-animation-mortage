@@ -5,10 +5,14 @@ function getStarted(button) {
 
     var stackOne = document.getElementById('stack-one');
 
+    var stackTwo = document.getElementById('stack-two');
+
     console.log(stackOne.className);
 
     if(stackOne.className === 'stack-one'){
       stackOne.classList.add('hidden');
+      stackTwo.classList.add('show');
+
     } else {
 
     }
