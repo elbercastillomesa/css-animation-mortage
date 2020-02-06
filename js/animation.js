@@ -24,7 +24,9 @@ function sliderOutput(variable, value){
 
 function setColor(element, value){
 
-	if (value < 20){element.style.background = "#FFFFFF";}
+	if (value < 20){
+		element.style.background = "url('./images/stage_1/nu2.png')";
+	}
 
 	if (value > 19 && value < 40){element.style.background = "#AA99ff";}
 
