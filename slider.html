@@ -21,21 +21,23 @@
 			<img class="cloud" src="images/additionals/cloud.png">
 		</div>
 
-	  <form oninput="output.value = Math.round(range.valueAsNumber)">
-	    <h2>
-	      Range slider
-	    </h2>
-	    <div class="range-output">
-	        <output class="output" name="output" id="output" for="range">
-	        	1
-	        </output>
-	    </div>
-	    <div class="range">
-	    	<button type="button" id="less">-</button>
-				<input name="range" id="range" type="range" min="1" max="50" value="1">
-				<button type="button" id="more">+</button>
-	    </div>
-	  </form>
+		<div class="slider-bar">
+		  <form oninput="output.value = Math.round(range.valueAsNumber)">
+		    <h2>
+		      Range slider
+		    </h2>
+		    <div class="range-output">
+		        <output class="output" name="output" id="output" for="range">
+		        	1
+		        </output>
+		    </div>
+		    <div class="range">
+		    	<button type="button" id="less">-</button>
+					<input name="range" id="range" type="range" min="1" max="50" value="1">
+					<button type="button" id="more">+</button>
+		    </div>
+		  </form>
+		</div>
 	</main>
 
 	<footer>
