@@ -14,23 +14,27 @@ document.getElementById('range').addEventListener("change", function(event){
 
 
 function sliderOutput(variable, value){
+
   var s = document.getElementById(variable);
-	s.value = value;
-	if(s.value > 1){
-		console.log('year');
+	s.value = value + ' Years';
+	if(value < 2){
+		s.value = value + ' Year';
 	}
-	setColor(document.body, s.value);
+
+	setColor(document.getElementById('main'), value);
 }
 
 function setColor(element, value){
 
 	if (value < 20){
-		element.style.background = "url('./images/stage_1/nu2.png')";
+		element.style.backgroundImage = "url(./images/stage_1/bg_1.png)";
+	} else if (value > 19 && value < 40){
+		element.style.backgroundImage = "url(./images/stage_2/bg_2.png)";
+	} else if (value > 39 && value < 50){
+		element.style.backgroundImage = "url('./images/stage_3/bg_3.png')";
+	} else if (value > 49){
+		element.style.backgroundImage = "url('../images/stage_3/bg_3.png')";
+	} else {
+		element.style.backgroundImage = "url(../images/stage_1/bg_1.png)";
 	}
-
-	if (value > 19 && value < 40){element.style.background = "#AA99ff";}
-
-	if (value > 39 && value < 50){element.style.background = "#EE00AA";}
-
-	if (value > 49){element.style.background = "#2299EE";}
 }
