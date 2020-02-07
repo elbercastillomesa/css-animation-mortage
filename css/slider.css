@@ -1,5 +1,5 @@
 main {
-  background-image: url(../images/stage_1/bg_1.png);
+  background-image: url(../images/stage_1/bg_1-min.png);
   background-position: center center;
   height: auto;
   background-repeat: no-repeat;
@@ -13,13 +13,18 @@ main {
 }
 
 .sky {
-  grid-area: 1 / 1 / 2 / 5;
+  grid-area: 2 / 1 / 3 / 7;
   position: relative;
 	height: 1%;
 }
 
+.future{
+  grid-area: 5 / 2 / 6 / 3;
+  position: relative;
+}
+
 .slider-bar {
-  grid-area: 2 / 1 / 3 / 5;
+  grid-area: 4 / 2 / 5 / 5;
   position: relative;
   opacity: 1;
 }
@@ -46,6 +51,7 @@ main {
 input[type=range]{
   width:80%;
   display:inline-block;
+  border-radius: 30%;
 }
 
 input[type='range']:focus {
@@ -59,7 +65,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  background: url('../images/slider_track/track_web.png');
+  background: url('../images/slider_track/track_web-min.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 10em;
@@ -69,7 +75,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-  background: url('../images/slider_track/track_web.png');
+  background: url('../images/slider_track/track_web-min.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 10em;
@@ -79,7 +85,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 input[type=range]::-ms-thumb {
-  background: url('../images/slider_track/track_web.png');
+  background: url('../images/slider_track/track_web-min.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 10em;
@@ -147,7 +153,10 @@ output {
   box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #3ecbff}
+.button:hover {
+    background-image: linear-gradient(to bottom, #3ecbff, #0077a4);
+    color: #FFF;
+}
 
 .button:active {
   background-color: #8ED7FB;

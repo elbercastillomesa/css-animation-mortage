@@ -26,7 +26,7 @@ body {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: minmax(50px, auto);
+  grid-auto-rows: minmax(3em, auto);
   margin: 0 auto;
   overflow-x:hidden;
 }
@@ -34,13 +34,14 @@ body {
 header{
   grid-area: 1 / 1 / 2 / 7;
   background: #0077a3;
+  z-index: 2;
 }
 
 main{
-  grid-area: 2 / 1 / 6 / 7;
+  grid-area: 1 / 1 / 6 / 7;
   display: grid;
   grid-template-columns: 20% auto;
-  grid-auto-rows: minmax(50px, auto);
+  grid-auto-rows: minmax(1em, auto);
   grid-gap: 10px;
 }
 
@@ -66,9 +67,4 @@ footer{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 30%;
-}
-
-.button:hover {
-    background-image: linear-gradient(to bottom, #3ecbff, #0077a4);
-    color: #FFF;
 }
