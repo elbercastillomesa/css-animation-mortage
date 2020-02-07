@@ -8,9 +8,8 @@ main {
   background-size: cover;  /* This is what makes the background image rescale based
      on the container's size */
   opacity: 1;
-
   background-size: 100%;
-  height: 55vw;
+  height: 30em;
 }
 
 .sky {
@@ -44,38 +43,6 @@ main {
 	}
 }
 
-/********* Chrome *********/
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type='range'] {
-      overflow: hidden;
-      width: 800px;
-      -webkit-appearance: none;
-      background-color: #F4F4F4;
-    }
-
-    input[type='range']::-webkit-slider-runnable-track {
-      height: 100px;
-      -webkit-appearance: none;
-      color: #13bba4;
-      margin-top: -1px;
-    }
-
-    input[type='range']::-webkit-slider-thumb {
-      width: 270px;
-      -webkit-appearance: none;
-      height: 100px;
-      cursor: ew-resize;
-      background: none;
-      background-image: url('../images/slider_track/track.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      box-shadow: -800px 0 0 800px #999999;
-    }
-}
-*/
-
-
 input[type=range]{
   width:80%;
   display:inline-block;
@@ -95,8 +62,8 @@ input[type=range]::-webkit-slider-thumb {
   background: url('../images/slider_track/track_web.png');
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 10em;
+  height: 10em;
   border: none;
   cursor: ew-resize;
 }
@@ -105,20 +72,18 @@ input[type=range]::-moz-range-thumb {
   background: url('../images/slider_track/track_web.png');
   background-repeat: no-repeat;
   background-position: center;
-  margin-left: -5%;
-  width: 200px;
-  height: 200px;
+  width: 10em;
+  height: 10em;
   border: none;
   cursor: ew-resize;
-
 }
 
 input[type=range]::-ms-thumb {
   background: url('../images/slider_track/track_web.png');
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 10em;
+  height: 10em;
   border: none;
   cursor: ew-resize;
 }
@@ -146,6 +111,9 @@ input[type=range]::-ms-fill-upper {
 }
 
 
+.range-output{
+  margin-top: 1em;
+}
 
 output {
   /*position: absolute;*/
@@ -162,7 +130,7 @@ output {
 }
 
 .button {
-  background-color: #5dbcd2;
+  background-color: #0077a4;
   border: none;
   color: white;
   padding: 20px 34px;
@@ -172,9 +140,17 @@ output {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 30%;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 1.5em;
+  outline: none;
+  box-shadow: 0 9px #999;
 }
 
-.button:hover {
-    background-image: linear-gradient(to bottom, #3199b1, #99d5e3);
-    color: #000;
+.button:hover {background-color: #3ecbff}
+
+.button:active {
+  background-color: #8ED7FB;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
