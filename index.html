@@ -3,6 +3,7 @@
 <head>
 	<title>Modules - Mortage Animation</title>
   <link rel="stylesheet" type="text/css" href="css/main.scss">
+	<link rel="stylesheet" type="text/css" href="css/transition.css">
 </head>
 <body>
 
@@ -15,26 +16,73 @@
 	  </section>
 
 	  <main>
-	    <div class="slider">
-				<a href="slider.html" class="button">Slider</a>
+			<div class="stage-0" id="stage-0">
+		    <div class="slider">
+					<a href="slider.html" class="button">Slider</a>
+				</div>
+				<div class="calculator">
+					<a href="calculator.html" class="button">Calculator</a>
+				</div>
+				<div class="transition">
+					<a href="transition.html"  class="button">Transition</a>
+				</div>
+				<div class="#">
+					<a href="#"  class="button">Valorization</a>
+				</div>
+				<div class="original">
+					<a href="https://mymortgagestatus.info/calcs/futurehouse/?id=4DAC77F89D735338A4E256E417A623D502B558A855CD498F4FA28FEC91ABB8990FB8EC808E0E024201A5161448F7385A"  class="button">Original App</a>
+				</div>
 			</div>
-			<div class="calculator">
-				<a href="calculator.html" class="button">Calculator</a>
+
+			<div class="stage-1" id="stage-1">
+				<div id="stack-one" class="stack-one">
+		    	<button	onclick='getStarted(this)' class="button">Get Started</button>
+				</div>
+
+				<div id="stack-two" class="stack-two">
+					<div class="calculator">
+
+	            <form name="calculator">
+
+	                <input type="text" class="calculator-screen" name="answer" disabled />
+
+	                <div class="calculator-keys">
+
+	                    <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+	                    <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+	                    <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+
+	                    <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+	                    <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+	                    <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+
+	                    <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+	                    <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+	                    <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+
+	                    <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+	                    <input type="button" value=" . " onclick="calculator.answer.value += '.'" />
+	                    <input type="button" value=" &larr; " onclick="calculator.answer.value = calculator.answer.value.slice(0, -1)" />
+
+	                    <input type="button" class="all-clear" value=" AC " onclick="calculator.answer.value = ''" />
+
+	                    <input type="button" class="equal-sign" value=" &crarr; " onclick="" />
+
+	                </div>
+
+	            </form>
+
+	        </div>
+				</div>
 			</div>
-			<div class="transition">
-				<a href="transition.html"  class="button">Transition</a>
-			</div>
-			<div class="#">
-				<a href="#"  class="button">Valorization</a>
-			</div>
-			<div class="original">
-				<a href="https://mymortgagestatus.info/calcs/futurehouse/?id=4DAC77F89D735338A4E256E417A623D502B558A855CD498F4FA28FEC91ABB8990FB8EC808E0E024201A5161448F7385A"  class="button">Original App</a>
-			</div>
+
+
 	  </main>
 
 	  <footer>
 			&copy; 2020 Copyright: Unknow Client
 	  </footer>
 
+		<script type="text/javascript" src="js/transition.js"></script>
 </body>
 </html>

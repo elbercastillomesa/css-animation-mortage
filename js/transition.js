@@ -1,19 +1,48 @@
-function getStarted(button) {
+let box = document.getElementById('stage-0'),
+    stage1 = document.getElementById('stage-1'),
+    btn = document.getElementById('button');
 
-    var sectionDiv = document.getElementsByTagName('section');
-    var mainDiv = document.getElementsByTagName('main');
+btn.addEventListener('click', function () {
 
-    var stackOne = document.getElementById('stack-one');
 
-    var stackTwo = document.getElementById('stack-two');
+    if(!box.classList.contains('hidden')){
 
-    console.log(stackOne.className);
+      box.classList.add('visuallyhidden');
+      box.addEventListener('transitionend', function(e) {
+        box.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
 
-    if(stackOne.className === 'stack-one'){
-      stackOne.classList.add('hidden');
-      stackTwo.classList.add('show');
-
-    } else {
+      stage1.classList.remove('hidden');
+      setTimeout(function () {
+        stage1.classList.remove('visuallyhidden');
+      }, 200);
 
     }
-}
+/*
+  if (box.classList.contains('hidden')) {
+
+      console.log("hidden");
+
+    box.classList.remove('hidden');
+    setTimeout(function () {
+      box.classList.remove('visuallyhidden');
+    }, 200);
+  } else {
+
+console.log("show");
+
+    box.classList.add('visuallyhidden');
+    box.addEventListener('transitionend', function(e) {
+      box.classList.add('hidden');
+    }, {
+      capture: false,
+      once: true,
+      passive: false
+    });
+  }
+*/
+}, false);

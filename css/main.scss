@@ -38,11 +38,11 @@ header{
 }
 
 main{
-  grid-area: 1 / 1 / 6 / 7;
+  grid-area: 2 / 1 / 6 / 7;
   display: grid;
   grid-template-columns: 20% auto;
   grid-auto-rows: minmax(1em, auto);
-  grid-gap: 10px;
+  grid-gap: 0;
 }
 
 section{

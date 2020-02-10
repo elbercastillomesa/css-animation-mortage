@@ -1,3 +1,4 @@
+/*
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -8,7 +9,7 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
-
+*/
 .calculator {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -16,23 +17,23 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 20em;
 }
 
 .calculator-screen {
   width: 100%;
-  font-size: 5rem;
-  height: 80px;
+  font-size: 3rem;
+  height: 1em;
   border: none;
   background-color: #252525;
   color: #fff;
   text-align: right;
-  padding-right: 20px;
-  padding-left: 10px;
+  padding-right: 1.25em;
+  padding-left: 0.625;
 }
 
 input {
-  height: 60px;
+  height: 1em;
   background-color: #fff;
   border-radius: 3px;
   border: 1px solid #c4c4c4;
@@ -61,6 +62,6 @@ input:hover {
 .calculator-keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  grid-gap: 1em;
+  padding: 1em;
 }
