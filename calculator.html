@@ -6,15 +6,17 @@
         <link rel="stylesheet" type="text/css" href="css/calc.css">
     </head>
 
-    <body>       
+    <body>
 
         <div class="calculator">
 
             <form name="calculator">
 
                 <input type="text" class="calculator-screen" name="answer" disabled />
-          
-                <div class="calculator-keys">                    
+
+                <div class="calculator-keys">
+
+                  <div class="calculator-keys-num">
 
                     <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
                     <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
@@ -28,13 +30,16 @@
                     <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
                     <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
 
+                    <input type="button" value=" &middot; " onclick="calculator.answer.value += '.'" />
                     <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-                    <input type="button" value=" . " onclick="calculator.answer.value += '.'" />
                     <input type="button" value=" &larr; " onclick="calculator.answer.value = calculator.answer.value.slice(0, -1)" />
 
-                    <input type="button" class="all-clear" value=" AC " onclick="calculator.answer.value = ''" />
+                  </div>
 
+                  <div class="calculator-keys-act">
+                    <input type="button" class="all-clear" value="AC" onclick="calculator.answer.value = ''" />
                     <input type="button" class="equal-sign" value=" &crarr; " onclick="" />
+                  </div>
 
                 </div>
 
