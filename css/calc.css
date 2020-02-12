@@ -25,6 +25,33 @@
   padding-left: 0.625;
 }
 
+
+.button-2 {
+  background-color: #0077a4;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0em 0.3em;
+  cursor: pointer;
+  border-radius: 30%;
+  font-size: 2em;
+  outline: none;
+  box-shadow: 0 0.1em #999;
+}
+
+.button-2:hover {
+    background-image: linear-gradient(to bottom, #3ecbff, #0077a4);
+    color: #FFF;
+}
+
+.button-2:active {
+  background-color: #8ED7FB;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 input {
   height: 1em;
   background-color: #fff;
