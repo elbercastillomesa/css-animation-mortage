@@ -18,63 +18,66 @@
 
 		  <main>
 				<div class="stage-0" id="stage-0">
-		    	<button	id="button" class="button">Get Started</button>
+		    	<button	id="button-1" class="button">Get Started</button>
 				</div>
 
 				<div class="stage-1 visuallyhidden hidden" id="stage-1">
 
-					<!-- Trigger/Open The Modal -->
-					<button id="myBtn">Open Modal</button>
+					<div class="calculator">
+						<form name="calculator">
+
+							<input type="text" class="calculator-screen" name="answer" id="answer-final" disabled />
+  						<div id="textInput" style="position:absolute; left:0; right:0; top:0; bottom:0; cursor: pointer;" ></div>
+							<button	id="button-2" class="button">&rarr;</button>
+
+						</form>
+					</div>
 
 					<!-- The Modal -->
 					<div id="myModal" class="modal">
 
-					<!-- Modal content -->
-					<div class="modal-content">
-						<span class="close">&times;</span>
-						<p>Some text in the Modal..</p>
+						<!-- Modal content -->
+						<div class="modal-content">
+
+							<div class="calculator">
+
+									<form name="calculator">
+
+											<input type="text" class="calculator-screen" name="answer" id="answer" value="250000" disabled />
+
+											<div class="calculator-keys">
+
+													<input type="button" value="1" onclick="calcWrite(this)" />
+													<input type="button" value="2" onclick="calcWrite(this)" />
+													<input type="button" value="3" onclick="calcWrite(this)" />
+
+													<input type="button" value="4" onclick="calcWrite(this)" />
+													<input type="button" value="5" onclick="calcWrite(this)" />
+													<input type="button" value="6" onclick="calcWrite(this)" />
+
+													<input type="button" value="7" onclick="calcWrite(this)" />
+													<input type="button" value="8" onclick="calcWrite(this)" />
+													<input type="button" value="9" onclick="calcWrite(this)" />
+
+													<input type="button" value="0" onclick="calcWrite(this)" />
+													<input type="button" value="." onclick="calcWrite(this)" />
+													<input type="button" value="&larr;" onclick="calcErase()" />
+
+													<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
+
+													<input type="button" class="carry-sign" value="&crarr;" class="close" id="close" />
+
+											</div>
+
+									</form>
+							</div>
+						</div>
 					</div>
-
-					</div>
-
-
-
 				</div>
 
 				<div class="stage-2 visuallyhidden hidden" id="stage-2">
-					<div class="calculator">
-
-	            <form name="calculator">
-
-	                <input type="text" class="calculator-screen" name="answer" disabled />
-
-	                <div class="calculator-keys">
-
-	                    <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
-	                    <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
-	                    <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
-
-	                    <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
-	                    <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
-	                    <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
-
-	                    <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
-	                    <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
-	                    <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
-
-	                    <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-	                    <input type="button" value=" . " onclick="calculator.answer.value += '.'" />
-	                    <input type="button" value=" &larr; " onclick="calculator.answer.value = calculator.answer.value.slice(0, -1)" />
-
-	                    <input type="button" class="all-clear" value=" AC " onclick="calculator.answer.value = ''" />
-
-	                    <input type="button" class="equal-sign" value=" &crarr; " onclick="" />
-
-	                </div>
-
-	            </form>
-
-	        </div>
+					<p>STAGE 2</p>
+					<p>STAGE 2</p>
 				</div>
 
 		  </main>
@@ -84,35 +87,7 @@
 		  </footer>
 
 		<script type="text/javascript" src="js/transition.js"></script>
-		<script>
-
-		// Get the modal
-		var modal = document.getElementById("myModal");
-
-		// Get the button that opens the modal
-		var modalBtn = document.getElementById("myBtn");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on the button, open the modal
-		modalBtn.onclick = function() {
-		  modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
-		}
-
-
-		</script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript" src="js/calc.js"></script>
 </body>
 </html>

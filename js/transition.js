@@ -1,48 +1,48 @@
-let box = document.getElementById('stage-0'),
-    stage1 = document.getElementById('stage-1'),
-    btn = document.getElementById('button');
+let stageZero = document.getElementById('stage-0'),
+    stageOne = document.getElementById('stage-1'),
+    btnOne = document.getElementById('button-1');
 
-btn.addEventListener('click', function () {
+let stageTwo = document.getElementById('stage-2'),
+    btnTwo = document.getElementById('button-2');
 
+btnOne.addEventListener('click', function () {
 
-    if(!box.classList.contains('hidden')){
+    if(!stageZero.classList.contains('hidden')){
 
-      box.classList.add('visuallyhidden');
-      box.addEventListener('transitionend', function(e) {
-        box.classList.add('hidden');
+      stageZero.classList.add('visuallyhidden');
+      stageZero.addEventListener('transitionend', function(e) {
+        stageZero.classList.add('hidden');
       }, {
         capture: false,
         once: true,
         passive: false
       });
 
-      stage1.classList.remove('hidden');
+      stageOne.classList.remove('hidden');
       setTimeout(function () {
-        stage1.classList.remove('visuallyhidden');
+        stageOne.classList.remove('visuallyhidden');
       }, 200);
-
     }
-/*
-  if (box.classList.contains('hidden')) {
+}, false);
 
-      console.log("hidden");
+btnTwo.addEventListener('click', function () {
 
-    box.classList.remove('hidden');
+  console.log("boton 2");
+
+  if (stageTwo.classList.contains('hidden')) {
+    stageTwo.classList.remove('hidden');
     setTimeout(function () {
-      box.classList.remove('visuallyhidden');
-    }, 200);
+      stageTwo.classList.remove('visuallyhidden');
+    }, 20);
   } else {
-
-console.log("show");
-
-    box.classList.add('visuallyhidden');
-    box.addEventListener('transitionend', function(e) {
-      box.classList.add('hidden');
+    stageOne.classList.add('visuallyhidden');
+    stageOne.addEventListener('transitionend', function(e) {
+      stageOne.classList.add('hidden');
     }, {
       capture: false,
       once: true,
       passive: false
     });
   }
-*/
+
 }, false);

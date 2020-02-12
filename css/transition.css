@@ -23,6 +23,13 @@ h2 {
   display: block;
 }
 
+.stage-2{
+  grid-area: 2 / 3 / 5 / 5;
+  position: relative;
+  transition: all 1s linear;
+  display: block;
+}
+
 .hidden {
   display: none;
   top: -9999em;
