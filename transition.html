@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Transitions - Mortage Animation</title>
-  <link rel="stylesheet" type="text/css" href="css/main.scss">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/transition.css">
 	<link rel="stylesheet" type="text/css" href="css/modal.css">
 	<link rel="stylesheet" type="text/css" href="css/calc.css">
@@ -18,20 +18,21 @@
 		  </section>
 
 		  <main>
+
+				<div class="main-bg" id="main-bg"></div>
+
 				<div class="stage-0" id="stage-0">
 		    	<button	id="button-1" class="button">Get Started</button>
 				</div>
 
 				<div class="stage-1 visuallyhidden hidden" id="stage-1">
 
-					<div class="calculator">
+					<div class="container-screen">
 						<form name="calculator">
-
 							<input type="text" class="calculator-screen" name="answer" id="answer-final" disabled />
   						<div id="textInput" style="position:absolute; left:0; right:0; top:0; bottom:0; cursor: pointer;" ></div>
-							<button	id="button-2" class="button">&rarr;</button>
-
 						</form>
+						<button	id="button-2" class="button-2">&rarr;</button>
 					</div>
 
 					<!-- The Modal -->

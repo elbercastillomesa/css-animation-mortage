@@ -28,6 +28,17 @@ h2 {
   position: relative;
   transition: all 1s linear;
   display: block;
+
+  background-image: url(../images/stage_1/bg_1-min.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-size: 100%;  /* This is what makes the background image rescale based
+     on the container's size */
+  opacity: 1;
+  height: 100%;
+  width: 100%;
 }
 
 .hidden {
