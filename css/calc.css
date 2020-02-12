@@ -1,6 +1,7 @@
 .container-screen{
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 5%;
 }
 
 .calculator {
@@ -25,6 +26,14 @@
   padding-left: 0.625;
 }
 
+#textInput{
+  position: absolute;
+  left: 0;
+  right: 35%;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
 
 .button-2 {
   background-color: #0077a4;
