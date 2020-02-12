@@ -7,42 +7,44 @@ let stageTwo = document.getElementById('stage-2'),
 
 btnOne.addEventListener('click', function () {
 
-    if(!stageZero.classList.contains('hidden')){
+  event.preventDefault();
 
-      stageZero.classList.add('visuallyhidden');
-      stageZero.addEventListener('transitionend', function(e) {
-        stageZero.classList.add('hidden');
+  if(!stageZero.classList.contains('hidden')){
+
+    stageZero.classList.add('visuallyhidden');
+    stageZero.addEventListener('transitionend', function(e) {
+      stageZero.classList.add('hidden');
+    }, {
+      capture: false,
+      once: true,
+      passive: false
+    });
+
+    stageOne.classList.remove('hidden');
+    setTimeout(function () {
+      stageOne.classList.remove('visuallyhidden');
+    }, 200);
+  }
+}, false);
+
+btnTwo.addEventListener('click', function () {
+
+  event.preventDefault();
+
+  if (stageTwo.classList.contains('hidden')) {
+    stageTwo.classList.remove('hidden');
+    setTimeout(function () {
+      stageTwo.classList.remove('visuallyhidden');
+
+      stageOne.classList.add('visuallyhidden');
+      stageOne.addEventListener('transitionend', function(e) {
+        stageOne.classList.add('hidden');
       }, {
         capture: false,
         once: true,
         passive: false
       });
 
-      stageOne.classList.remove('hidden');
-      setTimeout(function () {
-        stageOne.classList.remove('visuallyhidden');
-      }, 200);
-    }
-}, false);
-
-btnTwo.addEventListener('click', function () {
-
-  console.log("boton 2");
-
-  if (stageTwo.classList.contains('hidden')) {
-    stageTwo.classList.remove('hidden');
-    setTimeout(function () {
-      stageTwo.classList.remove('visuallyhidden');
-    }, 20);
-  } else {
-    stageOne.classList.add('visuallyhidden');
-    stageOne.addEventListener('transitionend', function(e) {
-      stageOne.classList.add('hidden');
-    }, {
-      capture: false,
-      once: true,
-      passive: false
-    });
+    }, 200);
   }
-
 }, false);

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/transition.css">
 	<link rel="stylesheet" type="text/css" href="css/modal.css">
 	<link rel="stylesheet" type="text/css" href="css/calc.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
 </head>
 <body>
 		  <header>
@@ -76,8 +77,33 @@
 				</div>
 
 				<div class="stage-2 visuallyhidden hidden" id="stage-2">
-					<p>STAGE 2</p>
-					<p>STAGE 2</p>
+
+					<div class="sky">
+						<img class="cloud" src="images/additionals/cloud.png">
+					</div>
+
+					<div class="future">
+						<img class="car" src="images/stage_3/future-car-web.png">
+						<img class="shadow" src="images/stage_3/car-shadow-web.png">
+					</div>
+
+					<div class="slider-bar">
+					  <form oninput="output.value = Math.round(range.valueAsNumber)">
+					    <h2>
+					      Range slider
+					    </h2>
+					    <div class="range">
+					    	<button type="button" id="less" class="button">-</button>
+								<input name="range" id="range" type="range" class="slider" min="1" max="50" value="1"  autocomplete="off">
+								<button type="button" id="more" class="button">+</button>
+					    </div>
+							<div class="range-output">
+					        <output class="output" name="output" id="output" for="range">
+					        	1 Year
+					        </output>
+					    </div>
+					  </form>
+					</div>
 				</div>
 
 		  </main>
@@ -89,5 +115,6 @@
 		<script type="text/javascript" src="js/transition.js"></script>
 		<script type="text/javascript" src="js/modal.js"></script>
 		<script type="text/javascript" src="js/calc.js"></script>
+		<script type="text/javascript" src="js/animation.js"></script>
 </body>
 </html>

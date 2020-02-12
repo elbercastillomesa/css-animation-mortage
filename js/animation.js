@@ -21,7 +21,7 @@ function sliderOutput(variable, value){
 		s.value = value + ' Year';
 	}
 
-	setColor(document.getElementById('main'), value);
+	setColor(document.getElementById('stage-2'), value);
 }
 
 function setColor(element, value){
@@ -33,6 +33,6 @@ function setColor(element, value){
 	} else if (value > 39){
 		element.style.backgroundImage = "url('./images/stage_3/bg_3-min.png')";
 	} else {
-		element.style.backgroundImage = "url(../images/stage_1/bg_1-min.png)";
+		element.style.backgroundImage = "url(./images/stage_1/bg_1-min.png)";
 	}
 }
