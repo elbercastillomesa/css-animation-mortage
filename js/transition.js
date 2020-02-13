@@ -28,7 +28,7 @@ btnOne.addEventListener('click', function () {
 }, false);
 
 btnTwo.addEventListener('click', function () {
-console.log("boton2")
+
   event.preventDefault();
 
   if (stageTwo.classList.contains('hidden')) {

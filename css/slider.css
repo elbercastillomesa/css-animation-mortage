@@ -7,6 +7,7 @@
 .future{
   grid-area: 5 / 2 / 6 / 3;
   position: relative;
+  display: grid;
 }
 
 .slider-bar {
@@ -24,6 +25,16 @@
 	animation: wind 10s linear infinite;
 }
 
+.car {
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.shadow {
+  transform: translatey(0px);
+  animation: overshadow 6s ease-in-out infinite;
+}
+
 /* KeyFrames */
 @keyframes wind{
 	from{
@@ -34,7 +45,31 @@
 	}
 }
 
-input[type=range]{
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes overshadow {
+	0% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
+
+input[type='range']{
   width:80%;
   display:inline-block;
   border-radius: 30%;
@@ -101,7 +136,6 @@ input[type=range]::-ms-fill-lower {
 input[type=range]::-ms-fill-upper {
   background-color: black;
 }
-
 
 .range-output{
   margin-top: 1em;

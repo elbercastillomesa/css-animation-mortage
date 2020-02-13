@@ -27,7 +27,7 @@ h2 {
   grid-area: 1 / 1 / 6 / 7;
   position: relative;
   transition: all 1s linear;
-  display: block;
+  display: grid;
 
   background-image: url(../images/stage_1/bg_1-min.png);
   background-position: center center;
