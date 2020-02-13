@@ -7,7 +7,7 @@
 .future{
   grid-area: 5 / 2 / 6 / 3;
   position: relative;
-  display: grid;
+  display: none;
 }
 
 .slider-bar {
@@ -69,8 +69,15 @@
 	}
 }
 
+.range {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
 input[type='range']{
-  width:80%;
+  width:100%;
   display:inline-block;
   border-radius: 30%;
 }

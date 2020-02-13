@@ -26,12 +26,15 @@ function sliderOutput(variable, value){
 
 function setColor(element, value){
 
+	document.getElementById('future').style.display = 'none';
+
 	if (value < 20){
 		element.style.backgroundImage = "url(./images/stage_1/bg_1-min.png)";
 	} else if (value > 19 && value < 40){
 		element.style.backgroundImage = "url(./images/stage_2/bg_2-min.png)";
 	} else if (value > 39){
 		element.style.backgroundImage = "url('./images/stage_3/bg_3-min.png')";
+		document.getElementById('future').style.display = 'grid';
 	} else {
 		element.style.backgroundImage = "url(./images/stage_1/bg_1-min.png)";
 	}
