@@ -24,7 +24,7 @@ function sliderOutput(variable, value){
 		s.value = value + ' Year';
 	}
 
-	setColor(document.getElementById('stage-2'), value);
+	setColor(document.getElementById('stage-3'), value);
 }
 
 function setColor(element, value){

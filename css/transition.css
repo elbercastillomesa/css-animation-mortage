@@ -24,6 +24,13 @@ h2 {
 }
 
 .stage-2{
+  grid-area: 2 / 3 / 5 / 5;
+  position: relative;
+  transition: all 1s linear;
+  display: block;
+}
+
+.stage-3{
   grid-area: 1 / 1 / 6 / 7;
   position: relative;
   transition: all 1s linear;

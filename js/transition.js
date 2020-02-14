@@ -5,6 +5,9 @@ let stageZero = document.getElementById('stage-0'),
 let stageTwo = document.getElementById('stage-2'),
     btnTwo = document.getElementById('button-2');
 
+let stageThree = document.getElementById('stage-3'),
+    btnThree = document.getElementById('button-3');
+
 btnOne.addEventListener('click', function () {
 
   event.preventDefault();
@@ -39,6 +42,29 @@ btnTwo.addEventListener('click', function () {
       stageOne.classList.add('visuallyhidden');
       stageOne.addEventListener('transitionend', function(e) {
         stageOne.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+
+    }, 200);
+  }
+}, false);
+
+
+btnThree.addEventListener('click', function () {
+
+  event.preventDefault();
+
+  if (stageThree.classList.contains('hidden')) {
+    stageThree.classList.remove('hidden');
+    setTimeout(function () {
+      stageThree.classList.remove('visuallyhidden');
+
+      stageTwo.classList.add('visuallyhidden');
+      stageTwo.addEventListener('transitionend', function(e) {
+        stageTwo.classList.add('hidden');
       }, {
         capture: false,
         once: true,

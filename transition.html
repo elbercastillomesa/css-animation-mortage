@@ -30,7 +30,7 @@
 					<div class="container-screen" id="container-screen">
 						<form name="calculator">
 							<input type="text" class="calculator-screen" name="answer" id="answer-final" value="250000" disabled />
-  						<div id="textInput"></div>
+  						<div class="textInput" id="textInput"></div>
 						</form>
 						<button	id="button-2" class="button-2">&rarr;</button>
 					</div>
@@ -79,6 +79,34 @@
 
 				<div class="stage-2 visuallyhidden hidden" id="stage-2">
 
+					<div class="container-screen" id="percent-screen">
+						<form name="calculator">
+							<input type="text" class="calculator-screen" name="answer" id="percent-final" value="3.6500%" disabled />
+  						<div class="textInput" id="textInput-2"></div>
+						</form>
+						<button	id="button-3" class="button-2">&rarr;</button>
+					</div>
+
+					<!-- The Modal -->
+					<div id="myModal-2" class="modal">
+
+						<!-- Modal content -->
+						<div class="modal-content">
+
+							<div class="calculator">
+
+									<form name="calculator">
+
+											<input type="text" class="calculator-screen" name="percent" id="percent" value="250000" disabled />
+											<input type="button" class="carry-sign" value="&crarr;" class="close" id="close-2" />
+									</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="stage-3 visuallyhidden hidden" id="stage-3">
+
 					<div class="sky">
 						<img class="cloud" src="images/additionals/cloud.png">
 					</div>
@@ -90,7 +118,6 @@
 
 					<div class="slider-bar">
 
-
 					    <div class="range">
 					    	<button type="button" id="less" class="button-2">-</button>
 								<div class="div-tag" id="div-tag"></div>
@@ -98,7 +125,7 @@
 								<!--<input name="range" id="range" type="range" class="slider" min="1" max="50" value="1"  autocomplete="off">-->
 								<button type="button" id="more" class="button-2">+</button>
 					    </div>
-					  
+
 					</div>
 				</div>
 
