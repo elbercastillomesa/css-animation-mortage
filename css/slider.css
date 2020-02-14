@@ -127,7 +127,7 @@ output {
 
 input[type='range'] {
   display: block;
-  width: 250px;
+  width: 25em;
 }
 
 input[type='range']:focus {
@@ -226,6 +226,7 @@ input[type=range]::-ms-fill-upper {
   text-align: center;
   padding-top: 7px;
   top: -45px;
+  box-sizing: border-box;
 }
 
 .div-tag:after {

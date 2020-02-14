@@ -29,8 +29,6 @@ function sliderOutput(variable, value){
 
 function setColor(element, value){
 
-console.log(value);
-
 	document.getElementById('future').style.display = 'none';
 
 	if (value < 20){
@@ -52,14 +50,18 @@ function rangeThumb(){
 	  var divTag = document.querySelector('.div-tag');
 	  if (divTag) {
 	    divTag.innerHTML = rangeThumb.value;
-	    var pxls = w / 150;
-	    divTag.style.left = ((rangeThumb.value * pxls) + 315) + 'px';
+	    var pxls = w / 111;
+	    divTag.style.left = ((rangeThumb.value * pxls) + 245) + 'px';
 
 	    rangeThumb.addEventListener('input', function() {
 	      divTag.innerHTML = rangeThumb.value;
-	      divTag.style.left = ((rangeThumb.value * pxls) + 315) + 'px';
+	      divTag.style.left = ((rangeThumb.value * pxls) + 245) + 'px';
 	    }, false);
 	  }
+
+		/*	console.log("rangeThumb.value;", rangeThumb.value);
+			console.log("w: ",w);
+			console.log("pxls: ",pxls); */
 }
 
 rangeThumb();
