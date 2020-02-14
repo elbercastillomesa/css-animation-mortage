@@ -76,78 +76,6 @@
   justify-items: center;
 }
 
-input[type='range']{
-  width:100%;
-  display:inline-block;
-  border-radius: 30%;
-}
-
-input[type='range']:focus {
-  outline: none;
-}
-
-input[type='range'],
-input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  background: url('../images/slider_track/track_web-min.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 10em;
-  height: 10em;
-  border: none;
-  cursor: ew-resize;
-}
-
-input[type=range]::-moz-range-thumb {
-  background: url('../images/slider_track/track_web-min.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 10em;
-  height: 10em;
-  border: none;
-  cursor: ew-resize;
-}
-
-input[type=range]::-ms-thumb {
-  background: url('../images/slider_track/track_web-min.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 10em;
-  height: 10em;
-  border: none;
-  cursor: ew-resize;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  height: 10px;
-  background:linear-gradient(to right, green calc(var(--value)*1%), black 0);
-}
-input[type=range]::-moz-range-track {
-  height: 10px;
-  background:linear-gradient(to right, green calc(var(--value)*1%), black 0);
-}
-
-input[type=range]::-ms-track {
-  background-color: #777;
-  height: 3px;
-}
-
-input[type=range]::-ms-fill-lower {
-  background-color: green;
-}
-
-input[type=range]::-ms-fill-upper {
-  background-color: black;
-}
-
-.range-output{
-  margin-top: 1em;
-}
-
 output {
   /*position: absolute;*/
   background-image: linear-gradient(#444444, #999999);
@@ -191,14 +119,6 @@ output {
   transform: translateY(4px);
 }
 
-
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .inputDiv {
   width: 250px;
   margin: 100px auto;
@@ -218,6 +138,7 @@ input[type='range'],
 input[type='range']::-webkit-slider-runnable-track,
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
+  border-radius: 30%;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -232,23 +153,43 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
+/*
   background-color: #777;
   width: 15px;
   height: 15px;
   border: 3px solid #333;
   border-radius: 50%;
+*/
+  width: 2.5em;
+  height: 2.5em;
+  border: 0;
+  background: url('../images/slider_track/track_web-min.png');
+  background-size: 2em;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-top: -1em;
 }
 
 input[type=range]::-ms-thumb {
-  background-color: #777;
+/*
+  background-color: transparent;
   width: 20px;
   height: 20px;
   border: 3px solid #333;
   border-radius: 50%;
+*/
+  width: 2.5em;
+  height: 2.5em;
+  border: 0;
+  background: url('../images/slider_track/track_web-min.png');
+  background-size: 2em;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-top: -1em;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  background-color: #777;
+  background-color: transparent;
   height: 3px;
 }
 
@@ -257,29 +198,29 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-moz-range-track {
-  background-color: #777;
+  background-color: transparent;
   height: 3px;
 }
 
 input[type=range]::-ms-track {
-  background-color: #777;
+  background-color: transparent;
   height: 3px;
 }
 
 input[type=range]::-ms-fill-lower {
-  background-color: HotPink
+  background-color: transparent;
 }
 
 input[type=range]::-ms-fill-upper {
-  background-color: black;
+  background-color: transparent;
 }
 
-.etiqueta {
+.div-tag {
   width: 30px;
   height: 26px;
   position: absolute;
   z-index: 9;
-  background-color: HotPink;
+  background-color: lightgray;
   color: white;
   font-size: 12px;
   text-align: center;
@@ -287,7 +228,7 @@ input[type=range]::-ms-fill-upper {
   top: -45px;
 }
 
-.etiqueta:after {
+.div-tag:after {
   content: '';
   display: block;
   width: 10px;
@@ -297,7 +238,7 @@ input[type=range]::-ms-fill-upper {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 8;
-  background-color: HotPink;
+  background-color: lightgray;
   position: relative;
   left: 9px;
 }

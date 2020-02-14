@@ -90,26 +90,15 @@
 
 					<div class="slider-bar">
 
-						<div class="inputDiv">
-						<div class="etiqueta"></div>
-						<input type="range" value="35" min="0" max="100" autocomplete="off" id="input3">
-						</div>
 
-					  <form oninput="output.value = Math.round(range.valueAsNumber)">
-					    <h2>
-					      Range slider
-					    </h2>
 					    <div class="range">
 					    	<button type="button" id="less" class="button-2">-</button>
-								<input name="range" id="range" type="range" class="slider" min="1" max="50" value="1"  autocomplete="off">
+								<div class="div-tag" id="div-tag"></div>
+								<input type="range" value="1" min="0" max="100" autocomplete="off" id="range-thumb" autocomplete="off">
+								<!--<input name="range" id="range" type="range" class="slider" min="1" max="50" value="1"  autocomplete="off">-->
 								<button type="button" id="more" class="button-2">+</button>
 					    </div>
-							<div class="range-output">
-					        <output class="output" name="output" id="output" for="range">
-					        	1 Year
-					        </output>
-					    </div>
-					  </form>
+					  
 					</div>
 				</div>
 

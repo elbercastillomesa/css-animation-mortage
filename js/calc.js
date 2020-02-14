@@ -19,7 +19,7 @@ function calcErase(){
 function calcClear(){
   var answer = document.getElementById("answer");
   var answerFinal = document.getElementById("answer-final");
-  
+
   answer.setAttribute('value', '');
   answerFinal.setAttribute('value', '');
 }

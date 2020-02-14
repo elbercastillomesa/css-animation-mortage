@@ -1,15 +1,18 @@
 document.getElementById('more').addEventListener("click", function(event){
-	document.getElementById('range').value++;
-	sliderOutput("output", document.getElementById('range').value);
+	document.getElementById('range-thumb').value++;
+	sliderOutput("div-tag", document.getElementById('range-thumb').value);
+	rangeThumb();
 });
 
 document.getElementById('less').addEventListener("click", function(event){
-	document.getElementById('range').value--;
-	sliderOutput("output", document.getElementById('range').value);
+	document.getElementById('range-thumb').value--;
+	sliderOutput("div-tag", document.getElementById('range-thumb').value);
+	rangeThumb();
 });
 
-document.getElementById('range').addEventListener("change", function(event){
-	sliderOutput("output", document.getElementById('range').value);
+document.getElementById('range-thumb').addEventListener("change", function(event){
+	sliderOutput("div-tag", document.getElementById('range-thumb').value);
+	rangeThumb();
 });
 
 
@@ -26,6 +29,8 @@ function sliderOutput(variable, value){
 
 function setColor(element, value){
 
+console.log(value);
+
 	document.getElementById('future').style.display = 'none';
 
 	if (value < 20){
@@ -40,29 +45,21 @@ function setColor(element, value){
 	}
 }
 
+function rangeThumb(){
 
-// EL INPUT
-var elInput3 = document.querySelector('#input3');
-if (elInput3) {
-  var w = parseInt(window.getComputedStyle(elInput3, null).getPropertyValue('width'));
+	var rangeThumb = document.querySelector('#range-thumb');
+	  var w = parseInt(window.getComputedStyle(rangeThumb, null).getPropertyValue('width'));
+	  var divTag = document.querySelector('.div-tag');
+	  if (divTag) {
+	    divTag.innerHTML = rangeThumb.value;
+	    var pxls = w / 150;
+	    divTag.style.left = ((rangeThumb.value * pxls) + 315) + 'px';
 
-  // LA ETIQUETA
-  var etq = document.querySelector('.etiqueta');
-  if (etq) {
-    // el valor de la etiqueta (el tooltip)
-    etq.innerHTML = elInput3.value;
-
-    // calcula la posición inicial de la etiqueta (el tooltip);
-    var pxls = w / 100;
-
-    etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
-
-    elInput3.addEventListener('input', function() {
-      // cambia el valor de la etiqueta (el tooltip)
-      etq.innerHTML = elInput3.value;
-      // cambia la posición de la etiqueta (el tooltip)
-      etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
-
-    }, false);
-  }
+	    rangeThumb.addEventListener('input', function() {
+	      divTag.innerHTML = rangeThumb.value;
+	      divTag.style.left = ((rangeThumb.value * pxls) + 315) + 'px';
+	    }, false);
+	  }
 }
+
+rangeThumb();
