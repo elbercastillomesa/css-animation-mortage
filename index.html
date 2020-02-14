@@ -1,88 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Modules - Mortage Animation</title>
-  <link rel="stylesheet" type="text/css" href="css/main.scss">
+	<title>Transitions - Mortage Animation</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/transition.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<link rel="stylesheet" type="text/css" href="css/calc.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
 </head>
 <body>
+		  <header>
+		    <p>Mortage Calculator</p>
+		  </header>
 
-	  <header>
-	    <p>Mortage Calculator</p>
-	  </header>
+			<section>
+				Section
+		  </section>
 
-		<section>
-	    Section
-	  </section>
+		  <main>
 
-	  <main>
-			<div class="stage-0" id="stage-0">
-		    <div class="slider">
-					<a href="slider.html" class="button">Slider</a>
-				</div>
-				<div class="calculator">
-					<a href="calculator.html" class="button">Calculator</a>
-				</div>
-				<div class="transition">
-					<a href="transition.html"  class="button">Transition</a>
-				</div>
-				<div class="#">
-					<a href="#"  class="button">Valorization</a>
-				</div>
-				<div class="original">
-					<a href="https://mymortgagestatus.info/calcs/futurehouse/?id=4DAC77F89D735338A4E256E417A623D502B558A855CD498F4FA28FEC91ABB8990FB8EC808E0E024201A5161448F7385A"  class="button">Original App</a>
-				</div>
-			</div>
+				<div class="main-bg" id="main-bg"></div>
 
-			<div class="stage-1" id="stage-1">
-				<div id="stack-one" class="stack-one">
-		    	<button	onclick='getStarted(this)' class="button">Get Started</button>
+				<div class="stage-0" id="stage-0">
+		    	<button	id="button-1" class="button">Get Started</button>
 				</div>
 
-				<div id="stack-two" class="stack-two">
-					<div class="calculator">
+				<div class="stage-1 visuallyhidden hidden" id="stage-1">
 
-	            <form name="calculator">
+					<div class="container-screen" id="container-screen">
+						<form name="calculator">
+							<input type="text" class="calculator-screen" name="answer" id="answer-final" value="250000" disabled />
+  						<div class="textInput" id="textInput"></div>
+						</form>
+						<button	id="button-2" class="button-2">&rarr;</button>
+					</div>
 
-	                <input type="text" class="calculator-screen" name="answer" disabled />
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
 
-	                <div class="calculator-keys">
+						<!-- Modal content -->
+						<div class="modal-content">
 
-	                    <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
-	                    <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
-	                    <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+							<div class="calculator">
 
-	                    <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
-	                    <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
-	                    <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+									<form name="calculator">
 
-	                    <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
-	                    <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
-	                    <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+											<input type="text" class="calculator-screen" name="answer" id="answer" value="250000" disabled />
 
-	                    <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-	                    <input type="button" value=" . " onclick="calculator.answer.value += '.'" />
-	                    <input type="button" value=" &larr; " onclick="calculator.answer.value = calculator.answer.value.slice(0, -1)" />
+											<div class="calculator-keys">
 
-	                    <input type="button" class="all-clear" value=" AC " onclick="calculator.answer.value = ''" />
+													<input type="button" value="1" onclick="calcWrite(this)" />
+													<input type="button" value="2" onclick="calcWrite(this)" />
+													<input type="button" value="3" onclick="calcWrite(this)" />
 
-	                    <input type="button" class="equal-sign" value=" &crarr; " onclick="" />
+													<input type="button" value="4" onclick="calcWrite(this)" />
+													<input type="button" value="5" onclick="calcWrite(this)" />
+													<input type="button" value="6" onclick="calcWrite(this)" />
 
-	                </div>
+													<input type="button" value="7" onclick="calcWrite(this)" />
+													<input type="button" value="8" onclick="calcWrite(this)" />
+													<input type="button" value="9" onclick="calcWrite(this)" />
 
-	            </form>
+													<input type="button" value="0" onclick="calcWrite(this)" />
+													<input type="button" value="." onclick="calcWrite(this)" />
+													<input type="button" value="&larr;" onclick="calcErase()" />
 
-	        </div>
+													<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
+
+													<input type="button" class="carry-sign" value="&crarr;" class="close" id="close" />
+
+											</div>
+
+									</form>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
 
+				<div class="stage-2 visuallyhidden hidden" id="stage-2">
 
-	  </main>
+					<div class="container-screen" id="percent-screen">
+						<form name="calculator">
+							<input type="text" class="calculator-screen" name="answer" id="percent-final" value="3.6500%" disabled />
+  						<div class="textInput" id="textInput-2"></div>
+						</form>
+						<button	id="button-3" class="button-2">&rarr;</button>
+					</div>
 
-	  <footer>
-			&copy; 2020 Copyright: Unknow Client
-	  </footer>
+					<!-- The Modal -->
+					<div id="myModal-2" class="modal">
+
+						<!-- Modal content -->
+						<div class="modal-content">
+
+							<div class="calculator">
+
+								<div class="inputDiv">
+								<div class="etiqueta"></div>
+								<input type="range" value="35" min="0" max="100" autocomplete="off" id="input3" class="percent-slider">
+								</div>
+
+									<form name="calculator">
+
+											<input type="text" class="calculator-screen" name="percent" id="percent" value="250000" disabled />
+											<input type="button" class="carry-sign" value="&crarr;" class="close" id="close-2" />
+									</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="stage-3 visuallyhidden hidden" id="stage-3">
+
+					<div class="sky">
+						<img class="cloud" src="images/additionals/cloud.png">
+					</div>
+
+					<div class="future" id="future">
+						<img class="car" src="images/stage_3/future-car-web.png">
+						<img class="shadow" src="images/stage_3/car-shadow-web.png">
+					</div>
+
+					<div class="slider-bar">
+
+					    <div class="range">
+					    	<button type="button" id="less" class="button-2">-</button>
+								<div class="div-tag" id="div-tag"></div>
+								<input type="range" value="1" min="0" max="100" autocomplete="off" id="range-thumb" autocomplete="off">
+								<!--<input name="range" id="range" type="range" class="slider" min="1" max="50" value="1"  autocomplete="off">-->
+								<button type="button" id="more" class="button-2">+</button>
+					    </div>
+
+					</div>
+				</div>
+
+		  </main>
+
+		  <footer>
+				&copy; 2020 Copyright: Unknow Client
+		  </footer>
 
 		<script type="text/javascript" src="js/transition.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript" src="js/calc.js"></script>
+		<script type="text/javascript" src="js/animation.js"></script>
 </body>
 </html>
