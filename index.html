@@ -49,6 +49,7 @@
 
 											<div class="calculator-keys">
 
+<div class="calculator-keys-num">
 													<input type="button" value="1" onclick="calcWrite(this)" />
 													<input type="button" value="2" onclick="calcWrite(this)" />
 													<input type="button" value="3" onclick="calcWrite(this)" />
@@ -64,11 +65,11 @@
 													<input type="button" value="0" onclick="calcWrite(this)" />
 													<input type="button" value="." onclick="calcWrite(this)" />
 													<input type="button" value="&larr;" onclick="calcErase()" />
-
+</div>
+<div class="calculator-keys-act">
 													<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
-
 													<input type="button" class="carry-sign" value="&crarr;" class="close" id="close" />
-
+</div>
 											</div>
 
 									</form>
@@ -81,7 +82,7 @@
 
 					<div class="container-screen" id="percent-screen">
 						<form name="calculator">
-							<input type="text" class="calculator-screen" name="answer" id="percent-final" value="3.6500%" disabled />
+							<input type="text" class="calculator-screen" name="answer" id="percent-final" value="4.00%" disabled />
   						<div class="textInput" id="textInput-2"></div>
 						</form>
 						<button	id="button-3" class="button-2">&rarr;</button>
@@ -96,13 +97,12 @@
 							<div class="calculator">
 
 								<div class="inputDiv">
-								<div class="etiqueta"></div>
-								<input type="range" value="35" min="0" max="100" autocomplete="off" id="input3" class="percent-slider">
+									<div class="etiqueta"></div>
+									<input type="range" value="35" min="0" max="100" autocomplete="off" id="input3" class="percent-slider">
 								</div>
 
 									<form name="calculator">
-
-											<input type="text" class="calculator-screen" name="percent" id="percent" value="250000" disabled />
+										<input type="text" class="calculator-screen" name="answer" id="percent" value="4.00%" disabled />
 											<input type="button" class="carry-sign" value="&crarr;" class="close" id="close-2" />
 									</form>
 							</div>
