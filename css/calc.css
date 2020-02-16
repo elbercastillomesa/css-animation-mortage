@@ -114,8 +114,8 @@ input:hover {
 
 #close-2 {
   position: absolute;
-  right: 2%;
-  height: 16%;
+  right: 0;
+  height: 1.6em;
 }
 
 /********************************/
