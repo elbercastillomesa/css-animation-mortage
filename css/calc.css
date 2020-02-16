@@ -121,8 +121,8 @@ input:hover {
 /********************************/
 
 .inputDiv {
-  margin: 0 auto;
   width: 80%;
+  margin: 5% auto;
   position: relative;
 }
 

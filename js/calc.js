@@ -26,28 +26,29 @@ function calcClear(){
 
 // Percent Slider //
 
-// EL INPUT
-var elInput3 = document.querySelector('#input3');
-if (elInput3) {
-  var w = parseInt(window.getComputedStyle(elInput3, null).getPropertyValue('width'));
+//INPUT
+var input3 = document.querySelector('#input3');
+if (input3) {
 
-  // LA ETIQUETA
-  var etq = document.querySelector('.etiqueta');
-  if (etq) {
-    // el valor de la etiqueta (el tooltip)
-    etq.innerHTML = elInput3.value;
+  var percentDisplay = document.getElementById('percent');
 
-    // calcula la posición inicial de la etiqueta (el tooltip);
-    var pxls = w / 100;
+  if (percentDisplay) {
 
-    etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
+    input3.addEventListener('input', function() {
 
-    elInput3.addEventListener('input', function() {
-      // cambia el valor de la etiqueta (el tooltip)
-      etq.innerHTML = elInput3.value;
-      // cambia la posición de la etiqueta (el tooltip)
-      etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
+      percentDisplay.value = input3.value + '%';
+      document.getElementById('percent-final').value = input3.value + '%';
 
     }, false);
   }
+}
+
+function percentValue(sliderVal){
+
+  return precise_round( ((sliderVal.value - sliderVal.min) / (sliderVal.max - sliderVal.min))*100 , 2);
+}
+
+function precise_round(num, decimals) {
+   var t = Math.pow(10, decimals);
+   return (Math.round((num * t) + (decimals>0?1:0)*(Math.sign(num) * (10 / Math.pow(100, decimals)))) / t).toFixed(decimals);
 }

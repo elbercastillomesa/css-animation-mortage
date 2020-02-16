@@ -119,12 +119,6 @@ output {
   transform: translateY(4px);
 }
 
-.inputDiv {
-  width: 250px;
-  margin: 100px auto;
-  position: relative;
-}
-
 input[type='range'] {
   display: block;
   width: 25em;
