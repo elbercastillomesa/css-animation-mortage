@@ -49,27 +49,27 @@
 
 											<div class="calculator-keys">
 
-<div class="calculator-keys-num">
 													<input type="button" value="1" onclick="calcWrite(this)" />
 													<input type="button" value="2" onclick="calcWrite(this)" />
 													<input type="button" value="3" onclick="calcWrite(this)" />
+
+													<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
 
 													<input type="button" value="4" onclick="calcWrite(this)" />
 													<input type="button" value="5" onclick="calcWrite(this)" />
 													<input type="button" value="6" onclick="calcWrite(this)" />
 
+													<input type="button" value="&larr;" onclick="calcErase()" />
+
 													<input type="button" value="7" onclick="calcWrite(this)" />
 													<input type="button" value="8" onclick="calcWrite(this)" />
 													<input type="button" value="9" onclick="calcWrite(this)" />
 
-													<input type="button" value="0" onclick="calcWrite(this)" />
+													<input type="button" class="key-zero" value="0" onclick="calcWrite(this)" />
 													<input type="button" value="." onclick="calcWrite(this)" />
-													<input type="button" value="&larr;" onclick="calcErase()" />
-</div>
-<div class="calculator-keys-act">
-													<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
+
 													<input type="button" class="carry-sign" value="&crarr;" class="close" id="close" />
-</div>
+
 											</div>
 
 									</form>
