@@ -55,20 +55,23 @@ function setMortage(){
 
 	mortageValue = (houseValue *  Math.pow(1 + (interest/100), years) );
 
-	if( toLocaleStringSupportsOptions() ){
-
-		document.getElementById('calc-result').value = mortageValue.toLocaleString('en-US', {
-					 style: 'currency',
-					 currency: 'USD' ,
-			 }).slice(0, -3);
-
-	} else {
-		document.getElementById('calc-result').value = '$' + mortageValue.toLocaleString().slice(0, -3);
-	}
+	document.getElementById('calc-result').value = toLocaleStringSupportsOptions(mortageValue);
 }
 
-function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
+function toLocaleStringSupportsOptions(value) {
+
+	if( !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function') ){
+
+		return 	value.toLocaleString('en-US', {
+				 minimumFractionDigits: 1,
+				 maximumFractionDigits: 1,
+				 style: 'currency',
+				 currency: 'USD' ,
+			 }).slice(0,-2);
+
+	} else {
+		return '$' + value.toLocaleString().slice(0, -2);
+	}
 }
 
 function rangeThumb(){

@@ -1,29 +1,31 @@
 
 function calcWrite(data){
   var answer = document.getElementById("answer");
-  var answerFinal = document.getElementById("answer-final");
   var prev = answer.getAttribute('value') || '';
 
-  answer.setAttribute('value', prev + data.value);
-  answerFinal.setAttribute('value', prev + data.value);
+  answer.setAttribute('value', (prev + data.value));
+
+  calcOutput(answer.value);
 }
 
 function calcErase(){
   var answer = document.getElementById("answer");
-  var answerFinal = document.getElementById("answer-final");
 
   answer.setAttribute('value', answer.value.slice(0, -1));
-  answerFinal.setAttribute('value', answer.value.slice(0, -1));
+
+  calcOutput(answer.value);
 }
 
 function calcClear(){
   var answer = document.getElementById("answer");
-  var answerFinal = document.getElementById("answer-final");
-
   answer.setAttribute('value', '');
-  answerFinal.setAttribute('value', '');
+  calcOutput(1);
 }
 
+function calcOutput(value){
+  document.getElementById("answer-final")
+    .setAttribute('value', toLocaleStringSupportsOptions(parseFloat(value)));
+}
 // Percent Slider //
 
 //INPUT
