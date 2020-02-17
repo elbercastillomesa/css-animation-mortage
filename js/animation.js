@@ -50,7 +50,7 @@ function setColor(element, value){
 function setMortage(){
 
 	interest = parseFloat(document.getElementById('percent-final').value.slice(0, -1));
-	houseValue = parseFloat(document.getElementById('answer-final').value);
+	houseValue = parseFloat(Number(document.getElementById('answer-final').value.replace(/[^0-9\.-]+/g,"")));
 	years = parseFloat(document.getElementById('range-thumb').value);
 
 	mortageValue = (houseValue *  Math.pow(1 + (interest/100), years) );

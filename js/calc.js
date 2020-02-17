@@ -2,17 +2,13 @@
 function calcWrite(data){
   var answer = document.getElementById("answer");
   var prev = answer.getAttribute('value') || '';
-
   answer.setAttribute('value', (prev + data.value));
-
   calcOutput(answer.value);
 }
 
 function calcErase(){
   var answer = document.getElementById("answer");
-
   answer.setAttribute('value', answer.value.slice(0, -1));
-
   calcOutput(answer.value);
 }
 
@@ -23,10 +19,15 @@ function calcClear(){
 }
 
 function calcOutput(value){
+
+  console.log(value);
   document.getElementById("answer-final")
     .setAttribute('value', toLocaleStringSupportsOptions(parseFloat(value)));
 }
-// Percent Slider //
+
+window.onload = function() {
+  calcOutput(document.getElementById("answer").value);
+};
 
 //INPUT
 var input3 = document.querySelector('#input3');
