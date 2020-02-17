@@ -25,6 +25,7 @@ function sliderOutput(variable, value){
 	}
 
 	setColor(document.getElementById('stage-3'), value);
+	setMortage();
 }
 
 function setColor(element, value){
@@ -42,6 +43,21 @@ function setColor(element, value){
 		element.style.backgroundImage = "url(./images/stage_1/bg_1-min.png)";
 	}
 }
+
+
+// Mortage Calc //
+
+function setMortage(){
+
+	mortageResult = document.getElementById('calc-result');
+
+
+	
+
+}
+
+
+
 
 function rangeThumb(){
 
