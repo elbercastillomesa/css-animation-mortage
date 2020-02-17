@@ -56,6 +56,7 @@ btnTwo.addEventListener('click', function () {
 btnThree.addEventListener('click', function () {
 
   event.preventDefault();
+  setMortage();
 
   if (stageThree.classList.contains('hidden')) {
     stageThree.classList.remove('hidden');

@@ -49,35 +49,45 @@ function setColor(element, value){
 
 function setMortage(){
 
-	mortageResult = document.getElementById('calc-result');
+	interest = parseFloat(document.getElementById('percent-final').value.slice(0, -1));
+	houseValue = parseFloat(document.getElementById('answer-final').value);
+	years = parseFloat(document.getElementById('range-thumb').value);
 
+	mortageValue = (houseValue *  Math.pow(1 + (interest/100), years) );
 
-	
+	if( toLocaleStringSupportsOptions() ){
 
+		document.getElementById('calc-result').value = mortageValue.toLocaleString('en-US', {
+					 style: 'currency',
+					 currency: 'USD' ,
+			 }).slice(0, -3);
+
+	} else {
+		document.getElementById('calc-result').value = '$' + mortageValue.toLocaleString().slice(0, -3);
+	}
 }
 
-
-
+function toLocaleStringSupportsOptions() {
+  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
+}
 
 function rangeThumb(){
 
 	var rangeThumb = document.querySelector('#range-thumb');
-	  var w = parseInt(window.getComputedStyle(rangeThumb, null).getPropertyValue('width'));
-	  var divTag = document.querySelector('.div-tag');
+  var w = parseInt(window.getComputedStyle(rangeThumb, null).getPropertyValue('width'));
+  var divTag = document.querySelector('.div-tag');
+
 	  if (divTag) {
 	    divTag.innerHTML = rangeThumb.value;
-	    var pxls = w / 111;
-	    divTag.style.left = ((rangeThumb.value * pxls) + 245) + 'px';
+	    var pxls = w / 54;
+	    divTag.style.left = ((rangeThumb.value * pxls) + 230) + 'px';
 
 	    rangeThumb.addEventListener('input', function() {
 	      divTag.innerHTML = rangeThumb.value;
-	      divTag.style.left = ((rangeThumb.value * pxls) + 245) + 'px';
+	      divTag.style.left = ((rangeThumb.value * pxls) + 230) + 'px';
 	    }, false);
 	  }
-
-		/*	console.log("rangeThumb.value;", rangeThumb.value);
-			console.log("w: ",w);
-			console.log("pxls: ",pxls); */
 }
 
 rangeThumb();
+setMortage();
