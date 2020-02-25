@@ -153,86 +153,7 @@ function precise_round(num, decimals) {
    return (Math.round((num * t) + (decimals>0?1:0)*(Math.sign(num) * (10 / Math.pow(100, decimals)))) / t).toFixed(decimals);
 }
 
-/*
-let stageZero = document.getElementById('stage-0'),
-    stageOne = document.getElementById('stage-1'),
-    btnOne = document.getElementById('button-1');
 
-let stageTwo = document.getElementById('stage-2'),
-    btnTwo = document.getElementById('button-2');
-
-let stageThree = document.getElementById('stage-3'),
-    btnThree = document.getElementById('button-3');
-
-btnOne.addEventListener('click', function () {
-
-  event.preventDefault();
-
-  if(!stageZero.classList.contains('hidden')){
-
-    stageZero.classList.add('visuallyhidden');
-    stageZero.addEventListener('transitionend', function(e) {
-      stageZero.classList.add('hidden');
-    }, {
-      capture: false,
-      once: true,
-      passive: false
-    });
-
-    stageOne.classList.remove('hidden');
-    setTimeout(function () {
-      stageOne.classList.remove('visuallyhidden');
-    }, 200);
-  }
-}, false);
-
-btnTwo.addEventListener('click', function () {
-
-  event.preventDefault();
-
-  if (stageTwo.classList.contains('hidden')) {
-    stageTwo.classList.remove('hidden');
-    setTimeout(function () {
-      stageTwo.classList.remove('visuallyhidden');
-
-      stageOne.classList.add('visuallyhidden');
-      stageOne.addEventListener('transitionend', function(e) {
-        stageOne.classList.add('hidden');
-      }, {
-        capture: false,
-        once: true,
-        passive: false
-      });
-
-    }, 200);
-  }
-}, false);
-
-
-btnThree.addEventListener('click', function () {
-
-  event.preventDefault();
-  setMortage();
-
-  if (stageThree.classList.contains('hidden')) {
-    stageThree.classList.remove('hidden');
-    setTimeout(function () {
-      stageThree.classList.remove('visuallyhidden');
-
-      stageTwo.classList.add('visuallyhidden');
-      stageTwo.addEventListener('transitionend', function(e) {
-        stageTwo.classList.add('hidden');
-      }, {
-        capture: false,
-        once: true,
-        passive: false
-      });
-
-    }, 200);
-  }
-}, false);
-
-*/
 document.getElementById('more').addEventListener("click", function(event){
 	document.getElementById('range-thumb').value++;
 	sliderOutput("div-tag", document.getElementById('range-thumb').value);
@@ -265,7 +186,7 @@ function sliderOutput(variable, value){
 
 function setColor(element, value){
 
-	document.getElementById('future').style.display = 'none';
+	document.getElementById('homeCost').style.display = 'none';
 
 	if (value < 20){
 		element.style.backgroundImage = "url(http://creanovadesign.com/wp-content/uploads/2020/02/bg_1-min.png)";
@@ -284,13 +205,13 @@ function setColor(element, value){
 
 function setMortage(){
 
-	interest = parseFloat(document.getElementById('percent').value.slice(0, -1));
-	houseValue = parseFloat(Number(document.getElementById('answer').value.replace(/[^0-9\.-]+/g,"")));
+	interest = parseFloat(document.getElementById('mortage-rateOutput').value.slice(0, -1));
+	houseValue = parseFloat(Number(document.getElementById('mortage-valueOutput').value.replace(/[^0-9\.-]+/g,"")));
 	years = parseFloat(document.getElementById('range-thumb').value);
 
 	mortageValue = (houseValue *  Math.pow(1 + (interest/100), years) );
-
-	document.getElementById('calc-result').value = toLocaleStringSupportsOptions(mortageValue);
+console.log(toLocaleStringSupportsOptions(mortageValue));
+	//document.getElementById('calc-result').value = toLocaleStringSupportsOptions(mortageValue);
 }
 
 function toLocaleStringSupportsOptions(value) {
