@@ -66,7 +66,7 @@
 						<div class="mortage-infoTitle">
 							Cost of Home: $
 						</div>
-						<input class="mortage-infoOutput" id="mortage-valueOutput" value="250000" />
+						<input class="mortage-infoOutput" id="mortage-valueOutput" value="245000" disabled/>
 					</div>
 					<div class="mortage-info">
 						<div class="mortage-infoTitle">
@@ -89,7 +89,7 @@
 					<div class="calculator">
 							<form name="calculator">
 
-									<input type="text" class="calculator-screen" name="answer" id="answer" value="250000" disabled />
+									<input type="text" class="calculator-screen" name="answer" id="answer" value="245000" disabled />
 
 									<div class="calculator-keys">
 											<input type="button" value="1" onclick="calcWrite(this)" />
@@ -121,128 +121,6 @@
 
 			<!-- Modal Windows -->
 
-		</section>
-	</main>
-
-
-<!-- Modal Windows -->
-
-<!-- The Modal -->
-<div id="modal-calc" class="modal">
-	<!-- Modal content -->
-	<div class="modal-content">
-		<div class="calculator">
-				<form name="calculator">
-
-						<input type="text" class="calculator-screen" name="answer" id="answer" value="250000" disabled />
-
-						<div class="calculator-keys">
-								<input type="button" value="1" onclick="calcWrite(this)" />
-								<input type="button" value="2" onclick="calcWrite(this)" />
-								<input type="button" value="3" onclick="calcWrite(this)" />
-
-								<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
-
-								<input type="button" value="4" onclick="calcWrite(this)" />
-								<input type="button" value="5" onclick="calcWrite(this)" />
-								<input type="button" value="6" onclick="calcWrite(this)" />
-
-								<input type="button" value="←" onclick="calcErase()" />
-
-								<input type="button" value="7" onclick="calcWrite(this)" />
-								<input type="button" value="8" onclick="calcWrite(this)" />
-								<input type="button" value="9" onclick="calcWrite(this)" />
-
-								<input type="button" class="key-zero" value="0" onclick="calcWrite(this)" />
-								<input type="button" value="." onclick="calcWrite(this)" />
-
-								<input type="button" class="carry-sign" value="↵" class="close" id="close" />
-						</div>
-
-				</form>
-		</div>
-	</div>
-</div>
-
-<!-- Modal Windows -->
-
-
-
-
-
-
-
-
-
-
-
-
-	<main style="display: none">
-
-		<div class="main-bg" id="main-bg"></div>
-
-		<div class="stage-0" id="stage-0">
-			<button	id="button-1" class="button">Get Started</button>
-		</div>
-
-		<div class="stage-1 visuallyhidden hidden" id="stage-1">
-
-			<div class="container-screen" id="container-screen">
-				<form name="calculator">
-					<input type="text" class="calculator-screen" name="answer" id="answer-final" value="250000" disabled />
-					<div class="textInput" id="textInput"></div>
-				</form>
-				<button	id="button-2" class="button-2">→</button>
-			</div>
-
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-				<!-- Modal content -->
-				<div class="modal-content">
-					<div class="calculator">
-							<form name="calculator">
-
-									<input type="text" class="calculator-screen" name="answer" id="answer" value="250000" disabled />
-
-									<div class="calculator-keys">
-											<input type="button" value="1" onclick="calcWrite(this)" />
-											<input type="button" value="2" onclick="calcWrite(this)" />
-											<input type="button" value="3" onclick="calcWrite(this)" />
-
-											<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
-
-											<input type="button" value="4" onclick="calcWrite(this)" />
-											<input type="button" value="5" onclick="calcWrite(this)" />
-											<input type="button" value="6" onclick="calcWrite(this)" />
-
-											<input type="button" value="←" onclick="calcErase()" />
-
-											<input type="button" value="7" onclick="calcWrite(this)" />
-											<input type="button" value="8" onclick="calcWrite(this)" />
-											<input type="button" value="9" onclick="calcWrite(this)" />
-
-											<input type="button" class="key-zero" value="0" onclick="calcWrite(this)" />
-											<input type="button" value="." onclick="calcWrite(this)" />
-
-											<input type="button" class="carry-sign" value="↵" class="close" id="close" />
-									</div>
-
-							</form>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="stage-2 visuallyhidden hidden" id="stage-2">
-
-			<div class="container-screen" id="percent-screen">
-				<form name="calculator">
-					<input type="text" class="calculator-screen" name="answer" id="percent-final" value="4.00%" disabled />
-					<div class="textInput" id="textInput-2"></div>
-				</form>
-				<button	id="button-3" class="button-2">→</button>
-			</div>
-
 			<!-- The Modal -->
 			<div id="myModal-2" class="modal">
 
@@ -252,44 +130,18 @@
 					<div class="calculator">
 
 						<div class="inputDiv">
-							<input type="range" value="4" min="-20" max="20" step="0.125" autocomplete="off" id="input3" class="percent-slider">
+							<input type="range" value="4" min="-20" max="20" step="0.125" autocomplete="off" id="percent-input" class="percent-slider">
 						</div>
 
 							<form name="calculator">
-								<input type="text" class="calculator-screen" name="answer" id="percent" value="4.00%" disabled />
+								<input type="text" class="calculator-screen" name="answer" id="percent" value="3.375%" disabled />
 								<input type="button" class="carry-sign" value="↵" class="close" id="close-2" />
 							</form>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="stage-3 visuallyhidden hidden" id="stage-3">
-
-			<div class="sky">
-				<img class="cloud" src="http://creanovadesign.com/wp-content/uploads/2020/02/cloud.png">
-			</div>
-
-			<div class="future" id="future">
-				<img class="car" src="http://creanovadesign.com/wp-content/uploads/2020/02/future-car-web.png">
-				<img class="shadow" src="http://creanovadesign.com/wp-content/uploads/2020/02/car-shadow-web.png">
-			</div>
-
-			<input type="text" class="calc-result" name="calc-result" id="calc-result" disabled />
-
-			<div class="slider-bar">
-
-					<div class="range">
-
-						<button type="button" id="less" class="button-2">-</button>
-						<div class="div-tag" id="div-tag"></div>
-						<input type="range" value="1" min="1" max="50" autocomplete="off" id="range-thumb" autocomplete="off">
-						<button type="button" id="more" class="button-2">+</button>
-					</div>
-
-			</div>
-		</div>
-
+		</section>
 	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -30,7 +30,7 @@ $('.appreciation-next').click(() => {
 		'top': '-160px'
 	});
 	$('.homeCost').css('background-color', "#00AEEF");
-	$('.homeCost').css('background-image', "url('/wp-content/uploads/2020/02/stage1.jpg')");
+	$('.homeCost').css('background-image', "url('http://creanovadesign.com/wp-content/uploads/2020/02/stage1.jpg')");
 	$('#mortage-valueOutput').val(	$('#homeCost-input').val());
 	$('#mortage-rateOutput').val(	$('#appreciation-input').val());
 	setTimeout(() => {
@@ -43,7 +43,7 @@ $('.appreciation-next').click(() => {
 let modal = document.getElementById("modal-calc"),
   textInput = document.getElementById("homeCost-input"),
   close = document.getElementById("close"),
-  calcInput = document.getElementById("answer-final"),
+  calcInput = document.getElementById("answer"),
   backScreen = document.getElementById("container-screen");
 
 // When the user clicks on the button, open the modal
@@ -70,9 +70,9 @@ window.onclick = function(event) {
 // Modal-2 //
 
 let modalTwo = document.getElementById("myModal-2"),
-  textInputTwo = document.getElementById("textInput-2"),
+  textInputTwo = document.getElementById("appreciation-input"),
   closeTwo = document.getElementById("close-2"),
-  percentInput = document.getElementById("percent-final"),
+  percentInput = document.getElementById("percent"),
   percentScreen = document.getElementById("percent-screen");
 
 // When the user clicks on the button, open the modal
@@ -96,6 +96,9 @@ window.onclick = function(event) {
 }
 
 
+window.onload = function() {
+	calcOutput(textInput.value);
+};
 
 function calcWrite(data){
   var answer = document.getElementById("answer");
@@ -117,28 +120,24 @@ function calcClear(){
 }
 
 function calcOutput(value){
-
-  console.log(value);
-  document.getElementById("answer-final")
-    .setAttribute('value', toLocaleStringSupportsOptions(parseFloat(value)));
+	value = value || 1;
+  textInput.setAttribute('value', toLocaleStringSupportsOptions(parseFloat(value)));
 }
 
-window.onload = function() {
-  calcOutput(document.getElementById("answer").value);
-};
 
-//INPUT
-var input3 = document.querySelector('#input3');
+// Percent Value
+var input3 = document.getElementById('percent-input');
+
 if (input3) {
 
-  var percentDisplay = document.getElementById('percent');
+  var percentDisplay = document.getElementById('appreciation-input');
 
   if (percentDisplay) {
 
     input3.addEventListener('input', function() {
 
       percentDisplay.value = input3.value + '%';
-      document.getElementById('percent-final').value = input3.value + '%';
+      document.getElementById('percent').value = input3.value + '%';
 
     }, false);
   }
@@ -154,7 +153,7 @@ function precise_round(num, decimals) {
    return (Math.round((num * t) + (decimals>0?1:0)*(Math.sign(num) * (10 / Math.pow(100, decimals)))) / t).toFixed(decimals);
 }
 
-
+/*
 let stageZero = document.getElementById('stage-0'),
     stageOne = document.getElementById('stage-1'),
     btnOne = document.getElementById('button-1');
@@ -233,7 +232,7 @@ btnThree.addEventListener('click', function () {
   }
 }, false);
 
-
+*/
 document.getElementById('more').addEventListener("click", function(event){
 	document.getElementById('range-thumb').value++;
 	sliderOutput("div-tag", document.getElementById('range-thumb').value);
@@ -285,8 +284,8 @@ function setColor(element, value){
 
 function setMortage(){
 
-	interest = parseFloat(document.getElementById('percent-final').value.slice(0, -1));
-	houseValue = parseFloat(Number(document.getElementById('answer-final').value.replace(/[^0-9\.-]+/g,"")));
+	interest = parseFloat(document.getElementById('percent').value.slice(0, -1));
+	houseValue = parseFloat(Number(document.getElementById('answer').value.replace(/[^0-9\.-]+/g,"")));
 	years = parseFloat(document.getElementById('range-thumb').value);
 
 	mortageValue = (houseValue *  Math.pow(1 + (interest/100), years) );
@@ -301,12 +300,11 @@ function toLocaleStringSupportsOptions(value) {
 		return 	value.toLocaleString('en-US', {
 				 minimumFractionDigits: 1,
 				 maximumFractionDigits: 1,
-				 style: 'currency',
 				 currency: 'USD' ,
 			 }).slice(0,-2);
 
 	} else {
-		return '$' + value.toLocaleString().slice(0, -2);
+		return value.toLocaleString().slice(0, -2);
 	}
 }
 
