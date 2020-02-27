@@ -43,26 +43,25 @@ $('.appreciation-next').click(() => {
 let modal = document.getElementById("modal-calc"),
   textInput = document.getElementById("homeCost-input"),
   close = document.getElementById("close"),
-  calcInput = document.getElementById("answer"),
-  backScreen = document.getElementById("container-screen");
+  calcInput = document.getElementById("answer");
 
 // When the user clicks on the button, open the modal
 textInput.onclick = function() {
   modal.style.display = "block";
-  backScreen.style.display = "none";
+
 }
 
 // When the user clicks on <span> (x), close the modal
 close.onclick = function() {
   modal.style.display = "none";
-  backScreen.style.display = "grid";
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    backScreen.style.display = "grid";
+
   }
 }
 
@@ -72,26 +71,22 @@ window.onclick = function(event) {
 let modalTwo = document.getElementById("myModal-2"),
   textInputTwo = document.getElementById("appreciation-input"),
   closeTwo = document.getElementById("close-2"),
-  percentInput = document.getElementById("percent"),
-  percentScreen = document.getElementById("percent-screen");
+  percentInput = document.getElementById("percent");
 
 // When the user clicks on the button, open the modal
 textInputTwo.onclick = function() {
   modalTwo.style.display = "block";
-  percentScreen.style.display = "none";
 }
 
 // When the user clicks on <span> (x), close the modal
 closeTwo.onclick = function() {
   modalTwo.style.display = "none";
-  percentScreen.style.display = "grid";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modalTwo) {
     modalTwo.style.display = "none";
-    percentScreen.style.display = "grid";
   }
 }
 
@@ -180,13 +175,13 @@ function sliderOutput(variable, value){
 		s.value = value + ' Year';
 	}
 
-	setColor(document.getElementById('stage-3'), value);
+	setColor(document.getElementById('homeCost'), value);
 	setMortage();
 }
 
 function setColor(element, value){
 
-	document.getElementById('homeCost').style.display = 'none';
+	//document.getElementById('homeCost').style.display = 'none';
 
 	if (value < 20){
 		element.style.backgroundImage = "url(http://creanovadesign.com/wp-content/uploads/2020/02/bg_1-min.png)";
@@ -194,7 +189,8 @@ function setColor(element, value){
 		element.style.backgroundImage = "url(http://creanovadesign.com/wp-content/uploads/2020/02/bg_2-min.png)";
 	} else if (value > 44){
 		element.style.backgroundImage = "url(http://creanovadesign.com/wp-content/uploads/2020/02/bg_3-min.png)";
-		document.getElementById('future').style.display = 'grid';
+		document.getElementById('future').style.display = 'inherit';
+		document.getElementById('sky').style.display = 'block';
 	} else {
 		element.style.backgroundImage = "url(http://creanovadesign.com/wp-content/uploads/2020/02/bg_1-min.png)";
 	}
@@ -211,7 +207,7 @@ function setMortage(){
 
 	mortageValue = (houseValue *  Math.pow(1 + (interest/100), years) );
 console.log(toLocaleStringSupportsOptions(mortageValue));
-	//document.getElementById('calc-result').value = toLocaleStringSupportsOptions(mortageValue);
+	//document.getElementById('mortage-valueOutput').value = toLocaleStringSupportsOptions(mortageValue);
 }
 
 function toLocaleStringSupportsOptions(value) {

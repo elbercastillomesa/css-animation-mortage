@@ -2,7 +2,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 8em;
   height: 8em;
   border: 0;
-  background: url('/wp-content/uploads/2020/02/track_web-min.png');
+  background: url('http://creanovadesign.com/wp-content/uploads/2020/02/track_web-min.png');
   background-size: 7em;
 	background-position: center;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@ input[type=range]::-moz-range-thumb {
 	width: 2.5em;
   height: 2.5em;
   border: 0;
-  background: url('/wp-content/uploads/2020/02/track_web-min.png');
+  background: url('http://creanovadesign.com/wp-content/uploads/2020/02/track_web-min.png');
   background-size: 2em;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -25,7 +25,7 @@ input[type=range]::-ms-thumb {
 	width: 2.5em;
   height: 2.5em;
   border: 0;
-  background: url('/wp-content/uploads/2020/02/track_web-min.png');
+  background: url('http://creanovadesign.com/wp-content/uploads/2020/02/track_web-min.png');
   background-size: 2em;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -61,7 +61,7 @@ input[type=range]::-ms-thumb {
 }
 
 .landing, .homeCost {
-	background-image: url('/wp-content/uploads/2020/02/home-landing.jpg');
+	background-image: url('http://creanovadesign.com/wp-content/uploads/2020/02/home-landing.jpg');
 	width: 100%;
 	padding-top: 88%;
 	background-color: transparent;
@@ -250,7 +250,7 @@ input[type=range]::-ms-thumb {
 
 .main-bg{
   grid-area: 1 / 1 / 6 / 7;
-  background: url('/wp-content/uploads/2020/02/home_1-min.png');
+  background: url('http://creanovadesign.com/wp-content/uploads/2020/02/home_1-min.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Background image is fixed in the viewport so that it doesn't move when
@@ -525,15 +525,25 @@ input:hover {
 
 
 .sky {
-  grid-area: 2 / 1 / 3 / 7;
-  position: relative;
-	height: 1%;
+  display: none;
+  position: absolute;
+  height: 2em;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 70%;
 }
 
 .future{
-  grid-area: 5 / 2 / 6 / 3;
-  position: relative;
   display: none;
+  position: absolute;
+  height: 2em;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 60%;
+  bottom: 0;
 }
 
 .slider-bar {
@@ -773,7 +783,7 @@ h2 {
   transition: all 1s linear;
   display: grid;
 
-  background-image: url('/wp-content/uploads/2020/02/bg_1-min.png');
+  background-image: url('http://creanovadesign.com/wp-content/uploads/2020/02/bg_1-min.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Background image is fixed in the viewport so that it doesn't move when
