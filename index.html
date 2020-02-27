@@ -6,143 +6,143 @@
 </head>
 <body>
 	<section class="infoText" style="display: none">
-		<div class="infoText-title">
-			What Could My Home Be Worth
-		</div>
-		<div class="infoText-bigger">
-			IN THE FUTURE?
-		</div>
-		<div class="infoText-description">
-			Let's take a quick peek into the future and see how the value of your home could change over time.
-		</div>
-	</section>
-
-	<main class="main">
-		<section class="landing" style="display: none; height: 60vh; background-color: #00AEEF;">
-			<button class="landing-getStarted">
-				Get started
-			</button>
+			<div class="infoText-title">
+				What Could My Home Be Worth
+			</div>
+			<div class="infoText-bigger">
+				IN THE FUTURE?
+			</div>
+			<div class="infoText-description">
+				Let's take a quick peek into the future and see how the value of your home could change over time.
+			</div>
 		</section>
-		<section class="homeCost" id="homeCost" style="display: none">
-			<div class="homeCost-container">
-				<div class="homeCost-title">
-					Enter the Cost of Your Home
-				</div>
-				<div class="homeCost-inputDiv">
-					<div class="homeCost-dollarSign">
-						$
+
+		<main class="main">
+			<section class="landing" style="display: none; height: 60vh; background-color: #00AEEF;">
+				<button class="landing-getStarted">
+					Get started
+				</button>
+			</section>
+			<section class="homeCost" id="homeCost" style="display: none">
+				<div class="homeCost-container">
+					<div class="homeCost-title">
+						Enter the Cost of Your Home
 					</div>
-					<input type="text" class="homeCost-input" id="homeCost-input" value="245000" >
-					<button class="homeCost-next">
-						Next
-					</button>
-				</div>
-			</div>
-			<div class="appreciation-container">
-				<div class="appreciation-title">
-					Average Annual Appreciation
-				</div>
-				<div class="appreciation-inputDiv">
-					<input type="text" class="appreciation-input" id="appreciation-input" value="3.375" >
-					<div class="appreciation-percentageSign">
-						%
-					</div>
-					<button class="appreciation-next">
-						Next
-					</button>
-				</div>
-			</div>
-			<div class="mortage-container">
-				<div class="mortage-slider">
-					<div class="range">
-						<button type="button" id="less" class="button-2">-</button>
-						<div class="div-tag" id="div-tag"></div>
-						<input type="range" value="1" min="1" max="50" autocomplete="off" id="range-thumb" autocomplete="off">
-						<button type="button" id="more" class="button-2">+</button>
-					</div>
-				</div>
-				<div class="mortage-bottom">
-					<div class="mortage-info">
-						<div class="mortage-infoTitle">
-							Cost of Home: $
+					<div class="homeCost-inputDiv">
+						<div class="homeCost-dollarSign">
+							$
 						</div>
-						<input class="mortage-infoOutput" id="mortage-valueOutput" value="245000" disabled/>
+						<input type="text" class="homeCost-input" id="homeCost-input" value="245000" >
+						<button class="homeCost-next">
+							Next
+						</button>
 					</div>
-					<div class="mortage-info">
-						<div class="mortage-infoTitle">
-							Appreciation:
-						</div>
-						<input class="mortage-infoOutput" id="mortage-rateOutput" value="3.375" />
-						<div class="mortage-infoTitle">
+				</div>
+				<div class="appreciation-container">
+					<div class="appreciation-title">
+						Average Annual Appreciation
+					</div>
+					<div class="appreciation-inputDiv">
+						<input type="text" class="appreciation-input" id="appreciation-input" value="3.375" >
+						<div class="appreciation-percentageSign">
 							%
 						</div>
+						<button class="appreciation-next">
+							Next
+						</button>
 					</div>
 				</div>
-			</div>
-
-			<!-- Modal Windows -->
-
-			<!-- The Modal -->
-			<div id="modal-calc" class="modal">
-				<!-- Modal content -->
-				<div class="modal-content">
-					<div class="calculator">
-							<form name="calculator">
-
-									<input type="text" class="calculator-screen" name="answer" id="answer" value="245000" disabled />
-
-									<div class="calculator-keys">
-											<input type="button" value="1" onclick="calcWrite(this)" />
-											<input type="button" value="2" onclick="calcWrite(this)" />
-											<input type="button" value="3" onclick="calcWrite(this)" />
-
-											<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
-
-											<input type="button" value="4" onclick="calcWrite(this)" />
-											<input type="button" value="5" onclick="calcWrite(this)" />
-											<input type="button" value="6" onclick="calcWrite(this)" />
-
-											<input type="button" value="←" onclick="calcErase()" />
-
-											<input type="button" value="7" onclick="calcWrite(this)" />
-											<input type="button" value="8" onclick="calcWrite(this)" />
-											<input type="button" value="9" onclick="calcWrite(this)" />
-
-											<input type="button" class="key-zero" value="0" onclick="calcWrite(this)" />
-											<input type="button" value="." onclick="calcWrite(this)" />
-
-											<input type="button" class="carry-sign" value="↵" class="close" id="close" />
-									</div>
-
-							</form>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal Windows -->
-
-			<!-- The Modal -->
-			<div id="myModal-2" class="modal">
-
-				<!-- Modal content -->
-				<div class="modal-content">
-
-					<div class="calculator">
-
-						<div class="inputDiv">
-							<input type="range" value="4" min="-20" max="20" step="0.125" autocomplete="off" id="percent-input" class="percent-slider">
+				<div class="mortage-container">
+					<div class="mortage-slider">
+						<div class="range">
+							<button type="button" id="less" class="button-2">-</button>
+							<div class="div-tag" id="div-tag"></div>
+							<input type="range" value="1" min="1" max="50" autocomplete="off" id="range-thumb" autocomplete="off">
+							<button type="button" id="more" class="button-2">+</button>
 						</div>
-
-							<form name="calculator">
-								<input type="text" class="calculator-screen" name="answer" id="percent" value="3.375%" disabled />
-								<input type="button" class="carry-sign" value="↵" class="close" id="close-2" />
-							</form>
+					</div>
+					<div class="mortage-bottom">
+						<div class="mortage-info">
+							<div class="mortage-infoTitle">
+								Cost of Home: $
+							</div>
+							<input class="mortage-infoOutput" id="mortage-valueOutput" value="245000" disabled/>
+						</div>
+						<div class="mortage-info">
+							<div class="mortage-infoTitle">
+								Appreciation:
+							</div>
+							<input class="mortage-infoOutput" id="mortage-rateOutput" value="3.375" />
+							<div class="mortage-infoTitle">
+								%
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
 
-		</section>
-	</main>
+				<!-- Modal Windows -->
+
+				<!-- The Modal -->
+				<div id="modal-calc" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content">
+						<div class="calculator">
+								<form name="calculator">
+
+										<input type="text" class="calculator-screen" name="answer" id="answer" value="245000" disabled />
+
+										<div class="calculator-keys">
+												<input type="button" value="1" onclick="calcWrite(this)" />
+												<input type="button" value="2" onclick="calcWrite(this)" />
+												<input type="button" value="3" onclick="calcWrite(this)" />
+
+												<input type="button" class="all-clear" value="AC" onclick="calcClear()" />
+
+												<input type="button" value="4" onclick="calcWrite(this)" />
+												<input type="button" value="5" onclick="calcWrite(this)" />
+												<input type="button" value="6" onclick="calcWrite(this)" />
+
+												<input type="button" value="←" onclick="calcErase()" />
+
+												<input type="button" value="7" onclick="calcWrite(this)" />
+												<input type="button" value="8" onclick="calcWrite(this)" />
+												<input type="button" value="9" onclick="calcWrite(this)" />
+
+												<input type="button" class="key-zero" value="0" onclick="calcWrite(this)" />
+												<input type="button" value="." onclick="calcWrite(this)" />
+
+												<input type="button" class="carry-sign" value="↵" class="close" id="close" />
+										</div>
+
+								</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Windows -->
+
+				<!-- The Modal -->
+				<div id="myModal-2" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+
+						<div class="calculator">
+
+							<div class="inputDiv">
+								<input type="range" value="4" min="-20" max="20" step="0.125" autocomplete="off" id="percent-input" class="percent-slider">
+							</div>
+
+								<form name="calculator">
+									<input type="text" class="calculator-screen" name="answer" id="percent" value="3.375%" disabled />
+									<input type="button" class="carry-sign" value="↵" class="close" id="close-2" />
+								</form>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/nova_final.js"></script>
